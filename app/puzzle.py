@@ -1,62 +1,76 @@
-GENRE_SET = {"Rock", "Pop", "Metal", "Dance"}
-ARTIST_SET = {"Rick Astley", "Taylor Swift", "Weird Al"}
-
-
-class ClueBundle:
+class Clue:
     def __init__(self, lyric, genre, year):
+        if not isinstance(lyric, str):
+            raise TypeError(f'[Clue] invalid lyric type: {lyric} is {type(lyric)}')
+        if not isinstance(genre, str):
+            raise TypeError(f'[Clue] invalid genre type: {genre} is {type(genre)}')
+        if not isinstance(year, int):
+            raise TypeError(f'[Clue] invalid year type: {year} is {type(year)}')
         self.lyric = lyric
         self.genre = Genre(genre)
-        assert isinstance(year, int)
+        self.decade = self._round_decade(year)
 
-        # make sure the year ends with a zero
-        round_to_decade = year / 10
-        round_to_decade = int(round_to_decade)
-        round_to_decade *= 10
+    @staticmethod
+    def _round_decade(year):
+        """make sure the year ends with a zero"""
+        return int(year / 10) * 10
 
-        year = round_to_decade
-        self.decade = year
+    def __str__(self):
+        return f"{self.lyric}, {self.genre}, {self.decade}s"
 
 
-class AnswerBundle:
+class Answer:
     def __init__(self, title, artist):
+        if not isinstance(title, str):
+            raise TypeError(f'[Answer] invalid lyric type: {title} is {type(title)}')
+        if not isinstance(artist, str):
+            raise TypeError(f'[Answer] invalid genre type: {artist} is {type(artist)}')
         self.title = title
         self.artist = Artist(artist)
 
+    def __str__(self):
+        return f"{self.title}, {self.artist}"
 
-class PuzzleInstance(ClueBundle, AnswerBundle):
-    def __init__(self, date, lyric, genre, decade, artist, title):
+
+class Puzzle:
+    def __init__(self, date, lyric, genre, year, artist, title):
         self.date = date
-        ClueBundle.__init__(self, lyric, genre, decade)
-        AnswerBundle.__init__(self, title, artist)
+        self.clue = Clue(lyric, genre, year)
+        self.answer = Answer(title, artist)
 
         self.lyric_guess = ""
         self.artist_guess = ""
 
-    def get_hint(self):
-        hint_genre = Genre.get_genre(self.genre)
-        hint_string = f"{self.lyric}, {hint_genre}, {self.decade}s"
-        return hint_string
-
     def get_answer(self, lyric_guess, artist_guess):
+        """I'd like to move this code (eventually) to the business logic, not the class"""
         self.lyric_guess = lyric_guess
         self.artist_guess = artist_guess
-        return (f"You guessed {self.lyric_guess} by {self.artist_guess}. The answer is {self.title} "
-                f"by {Artist.get_artist(self.artist)}.")
+        return (
+            f"You guessed {lyric_guess} by {artist_guess}. The answer is {self.answer.title} by {self.answer.artist}.")
+
+    def __str__(self):
+        return f'{self.clue}'
 
 
 class Genre:
-    def __init__(self, genre):
-        self.genre = genre
-        assert genre in GENRE_SET
+    GENRE_SET = {"Rock", "Pop", "Metal", "Dance"}
 
-    def get_genre(self):
-        return self.genre
+    def __init__(self, genre):
+        if genre not in self.GENRE_SET:
+            raise ValueError(f'[Genre] invalid genre: {genre} is not in GENRE_SET')
+        self.genre = genre
+
+    def __str__(self):
+        return f'{self.genre}'
 
 
 class Artist:
-    def __init__(self, artist):
-        self.artist = artist
-        assert artist in ARTIST_SET
+    ARTIST_SET = {"Rick Astley", "Taylor Swift", "Weird Al"}
 
-    def get_artist(self):
-        return self.artist
+    def __init__(self, artist):
+        if artist not in self.ARTIST_SET:
+            raise ValueError(f'[Artist] invalid artist: {artist} is not in ARTIST_SET')
+        self.artist = artist
+
+    def __str__(self):
+        return f'{self.artist}'
