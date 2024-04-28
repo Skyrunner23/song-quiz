@@ -7,13 +7,11 @@ class Clue:
         decade (int): The decade of the clue's year.
 
     Raises:
-        TypeError: If the types of `lyric`, `genre`, or `year` are not as expected.
+        TypeError: If the types of `lyric` or `year` are not as expected.
     """
     def __init__(self, lyric, genre, year):
         if not isinstance(lyric, str):
             raise TypeError(f'[Clue] invalid lyric type: {lyric} should be string, is {type(lyric)}')
-        if not isinstance(genre, str):
-            raise TypeError(f'[Clue] invalid genre type: {genre} should be string, is {type(genre)}')
         if not isinstance(year, int):
             raise TypeError(f'[Clue] invalid year type: {year} should ne int, is {type(year)}')
         self.lyric = lyric
@@ -37,13 +35,11 @@ class Answer:
         artist (Artist): The artist of the song.
 
     Raises:
-        TypeError: If the types of `title` or `artist` are not as expected.
+        TypeError: If the type of `title` is not as expected.
     """
     def __init__(self, title, artist):
         if not isinstance(title, str):
             raise TypeError(f'[Answer] invalid lyric type: {title} should be str, is {type(title)}')
-        if not isinstance(artist, str):
-            raise TypeError(f'[Answer] invalid genre type: {artist} should be str, is {type(artist)}')
         self.title = title
         self.artist = Artist(artist)
 
@@ -87,11 +83,14 @@ class Genre:
         genre (str): The genre name.
 
     Raises:
+        TypeError: If the type of `genre` is not a string.
         ValueError: If the provided genre is not in the predefined genre set.
     """
     GENRE_SET = {"Rock", "Pop", "Metal", "Dance"}
 
     def __init__(self, genre):
+        if not isinstance(genre, str):
+            raise TypeError(f'[Genre] invalid genre type: {genre} should be string, is {type(genre)}')
         if genre not in self.GENRE_SET:
             raise ValueError(f'[Genre] invalid genre: {genre} is not in GENRE_SET')
         self.genre = genre
@@ -107,11 +106,14 @@ class Artist:
         artist (str): The artist name.
 
     Raises:
+        TypeError: If the type of `artist` is not a string.
         ValueError: If the provided artist is not in the predefined artist set.
     """
     ARTIST_SET = {"Rick Astley", "Taylor Swift", "Weird Al"}
 
     def __init__(self, artist):
+        if not isinstance(artist, str):
+            raise TypeError(f'[Artist] invalid artist type: {artist} should be str, is {type(artist)}')
         if artist not in self.ARTIST_SET:
             raise ValueError(f'[Artist] invalid artist: {artist} is not in ARTIST_SET')
         self.artist = artist
