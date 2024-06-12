@@ -57,7 +57,7 @@ class Puzzle:
         lyric_guess (str): A guess for the lyric of the song.
         artist_guess (str): A guess for the artist of the song.
     """
-    def __init__(self, date, lyric, genre, year, artist, title):
+    def __init__(self, date, lyric, genre, year, title, artist):
         self.date = date
         self.clue = Clue(lyric, genre, year)
         self.answer = Answer(title, artist)
@@ -109,7 +109,7 @@ class Artist:
         TypeError: If the type of `artist` is not a string.
         ValueError: If the provided artist is not in the predefined artist set.
     """
-    ARTIST_SET = {"Rick Astley", "Taylor Swift", "Weird Al"}
+    ARTIST_SET = {"Rick Astley", "Taylor Swift", "Weird Al", "Queen"}
 
     def __init__(self, artist):
         if not isinstance(artist, str):

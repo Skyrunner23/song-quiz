@@ -1,0 +1,14 @@
+version: "2"
+services:
+  app:
+    build: .
+    links:
+      - db
+  db:
+    image: restsql/mysql-sakila:latest
+    ports:
+      - "32000:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: sakila
+    volumes:
+      - ./data:/docker-entrypoint-initdb.d/:ro
