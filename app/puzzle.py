@@ -1,3 +1,6 @@
+import csv
+
+
 class Clue:
     """A class representing a clue for a puzzle.
 
@@ -9,6 +12,7 @@ class Clue:
     Raises:
         TypeError: If the types of `lyric` or `year` are not as expected.
     """
+
     def __init__(self, lyric, genre, year):
         if not isinstance(lyric, str):
             raise TypeError(f'[Clue] invalid lyric type: {lyric} should be string, is {type(lyric)}')
@@ -37,6 +41,7 @@ class Answer:
     Raises:
         TypeError: If the type of `title` is not as expected.
     """
+
     def __init__(self, title, artist):
         if not isinstance(title, str):
             raise TypeError(f'[Answer] invalid lyric type: {title} should be str, is {type(title)}')
@@ -57,6 +62,7 @@ class Puzzle:
         lyric_guess (str): A guess for the lyric of the song.
         artist_guess (str): A guess for the artist of the song.
     """
+
     def __init__(self, date, lyric, genre, year, title, artist):
         self.date = date
         self.clue = Clue(lyric, genre, year)
@@ -120,3 +126,18 @@ class Artist:
 
     def __str__(self):
         return f'{self.artist}'
+
+
+def get_song_from_file(date, filepath):
+    desired_date = date
+    test_puzzle = None
+
+    with open(filepath) as songs:
+        csv_reader = csv.reader(songs, delimiter="|")
+        for row in csv_reader:
+            if row[0] == desired_date:
+                test_puzzle = Puzzle(row[0], row[1], row[2], int(row[3]), row[4], row[5])
+                clue_out = "%s, %s, %ss" % (row[1], row[2], row[3])
+                break
+
+    return test_puzzle

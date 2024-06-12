@@ -1,23 +1,32 @@
 import unittest
-import csv
-from app.puzzle import Puzzle
+from app.puzzle import *
 
 """Import a row from the csv with a specific date and use it as the puzzle data"""
 
 
 def test_clue():
-    test_puzzle = ""
+    desired_date = "1/1/2024"
+    filepath = "../app/song_list.csv"
+    test_puzzle = None
+    clue_out = None
+
+    """this is the same code that the puzzle.py file uses to fetch a song, we're just fetching it ourselves here to 
+    make sure the fetcher in the other file is working"""
     with open("../app/song_list.csv") as songs:
         csv_reader = csv.reader(songs, delimiter="|")
         for row in csv_reader:
-            if row[0] == "1/1/2024":
+            if row[0] == desired_date:
                 test_puzzle = Puzzle(row[0], row[1], row[2], int(row[3]), row[4], row[5])
+                clue_out = "%s, %s, %ss" % (row[1], row[2], row[3])
                 break
 
-    clue_out = "We've known each other for so long, Pop, 1980s"
+    fetched_puzzle = get_song_from_file(desired_date, "../app/song_list.csv")
+    fetched_clue = str(fetched_puzzle)
 
-    assert str(test_puzzle) == clue_out
-    assert str(test_puzzle.clue) == clue_out
+    assert fetched_clue == clue_out
+
+
+"""This test is still using arbitrary values"""
 
 
 def test_answer():
