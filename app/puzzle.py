@@ -128,16 +128,16 @@ class Artist:
         return f'{self.artist}'
 
 
-def get_song_from_file(date, filepath):
-    desired_date = date
-    test_puzzle = None
+#def get_song_from_file(date, filepath):
+#    desired_date = date
+#    test_puzzle = None
 
-    with open(filepath) as songs:
-        csv_reader = csv.reader(songs, delimiter="|")
-        for row in csv_reader:
-            if row[0] == desired_date:
-                test_puzzle = Puzzle(row[0], row[1], row[2], int(row[3]), row[4], row[5])
-                clue_out = "%s, %s, %ss" % (row[1], row[2], row[3])
-                break
-
-    return test_puzzle
+#    with open(filepath) as songs:
+#        csv_reader = csv.reader(songs, delimiter="|")
+#        for row in csv_reader:
+#            if row[0] == desired_date:
+#                test_puzzle = Puzzle(row[0], row[1], row[2], int(row[3]), row[4], row[5])
+#                clue_out = "%s, %s, %ss" % (row[1], row[2], row[3])
+#                break
+#
+#    return test_puzzle
