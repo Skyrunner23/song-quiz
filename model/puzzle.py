@@ -15,7 +15,7 @@ class Clue:
         if not isinstance(lyric, str):
             raise TypeError(f'[Clue] invalid lyric type: {lyric} should be string, is {type(lyric)}')
         if not isinstance(year, int):
-            raise TypeError(f'[Clue] invalid year type: {year} should ne int, is {type(year)}')
+            raise TypeError(f'[Clue] invalid year type: {year} should be int, is {type(year)}')
         self.lyric = lyric
         self.genre = Genre(genre)
         self.decade = self._round_decade(year)
@@ -27,6 +27,15 @@ class Clue:
 
     def __str__(self):
         return f"{self.lyric}, {self.genre}, {self.decade}s"
+
+    def __eq__(self, other):
+        if not isinstance(other, Clue):
+            # don't attempt to compare against unrelated types
+            return NotImplemented
+
+        return self.lyric == other.lyric and \
+               self.genre == other.genre and \
+               self.decade == other.decade
 
 
 class Answer:
@@ -48,6 +57,14 @@ class Answer:
 
     def __str__(self):
         return f"{self.title}, {self.artist}"
+
+    def __eq__(self, other):
+        if not isinstance(other, Answer):
+            # don't attempt to compare against unrelated types
+            return NotImplemented
+
+        return self.title == other.title and \
+               self.artist == other.artist
 
 
 class Puzzle:
@@ -79,6 +96,15 @@ class Puzzle:
     def __str__(self):
         return f'{self.clue}'
 
+    def __eq__(self, other):
+        if not isinstance(other, Puzzle):
+            # don't attempt to compare against unrelated types
+            return NotImplemented
+
+        return self.date == other.date and \
+               self.clue == other.clue and \
+               self.answer == other.answer
+
 
 class Genre:
     """A class representing a music genre.
@@ -101,6 +127,13 @@ class Genre:
 
     def __str__(self):
         return f'{self.genre}'
+
+    def __eq__(self, other):
+        if not isinstance(other, Genre):
+            # don't attempt to compare against unrelated types
+            return NotImplemented
+
+        return self.genre == other.genre
 
 
 class Artist:
@@ -125,3 +158,9 @@ class Artist:
     def __str__(self):
         return f'{self.artist}'
 
+    def __eq__(self, other):
+        if not isinstance(other, Artist):
+            # don't attempt to compare against unrelated types
+            return NotImplemented
+
+        return self.artist == other.artist

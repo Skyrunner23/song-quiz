@@ -16,7 +16,7 @@ def test_reader_positive():
 
     check_puzzle = get_puzzle_by_date(test_date)
 
-    assert str(test_puzzle) == str(check_puzzle)
+    assert test_puzzle == check_puzzle
 
 def test_reader_negative():
     """make sure output is okay when puzzle isn't found"""
