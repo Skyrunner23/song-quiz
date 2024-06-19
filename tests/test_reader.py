@@ -2,6 +2,8 @@ import unittest
 from db.reader import *
 
 """Import a row from the csv with a specific date and use it as the puzzle data"""
+
+
 def test_reader_positive():
     """make sure output is okay when puzzle is found"""
 
@@ -19,6 +21,7 @@ def test_reader_positive():
 
     assert test_puzzle == check_puzzle
 
+
 def test_reader_negative():
     """make sure output is okay when puzzle isn't found"""
 
@@ -26,7 +29,8 @@ def test_reader_negative():
     test_repo = MyCSVRepository()
 
     check_puzzle = test_repo.get_puzzle_by_date(test_date)
-    assert check_puzzle == None
+    assert check_puzzle is None
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -1,6 +1,7 @@
 import unittest
 from model.puzzle import *
 
+
 def test_clue():
     test_lyric = "We've known each other for so long"
     test_genre = "Pop"
@@ -19,6 +20,7 @@ def test_answer():
     test_answer = Answer(test_title, test_artist)
     assert answer_out == str(test_answer)
 
+
 def test_puzzle():
     test_date = "2024/01/01"
     test_lyric = "We've known each other for so long"
@@ -36,8 +38,7 @@ def test_puzzle():
     assert str(test_puzzle.answer) == answer_out
     assert str(test_puzzle.date) == date_out
 
-
-    """\/ old version of the same code \/"""
+    """old version of the same code"""
     # assert test_puzzle.get_answer("Never Gonna Give You Up", "Rick Astley") == ("You guessed Never Gonna Give You
     # Up " "by Rick Astley. The answer is Never " "Gonna Give You Up by Rick Astley.") test_puzzle = Puzzle(
     # "1/1/2024", "We've known each other for so long", "Pop", 1980, "Rick Astley", "Never Gonna Give You Up") assert

@@ -10,8 +10,7 @@ class MyCSVRepository(PuzzleRepository):
     def __init__(self):
         super().__init__()
 
-
-    def get_puzzle_by_date(self,desired_date):
+    def get_puzzle_by_date(self, desired_date):
         """
         search the CSV file for a puzzle, based on the date
 
@@ -22,10 +21,10 @@ class MyCSVRepository(PuzzleRepository):
 
         with open(os.path.join(os.path.dirname(__file__), self.FILEPATH), 'r') as puzzles:
             csv_reader = csv.reader(puzzles, delimiter="|")
-            for date,lyric,genre,decade,title,artist in csv_reader:
+            for date, lyric, genre, decade, title, artist in csv_reader:
                 if date == desired_date:
                     # TODO: add check for valid date, genre, artist?
-                    puzzle = Puzzle(date,lyric,genre,int(decade),title,artist)
+                    puzzle = Puzzle(date, lyric, genre, int(decade), title, artist)
                     break
 
         return puzzle

@@ -92,7 +92,6 @@ class Puzzle:
         self.lyric_guess = ""
         self.artist_guess = ""
 
-
     def __str__(self):
         return f'{self.clue}'
 
