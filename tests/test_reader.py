@@ -13,8 +13,9 @@ def test_reader_positive():
     test_title = "Never Gonna Give You Up"
 
     test_puzzle = Puzzle(test_date, test_lyric, test_genre, test_year, test_title, test_artist)
+    test_repo = MyCSVRepository()
 
-    check_puzzle = get_puzzle_by_date(test_date)
+    check_puzzle = test_repo.get_puzzle_by_date(test_date)
 
     assert test_puzzle == check_puzzle
 
@@ -22,8 +23,9 @@ def test_reader_negative():
     """make sure output is okay when puzzle isn't found"""
 
     test_date = "1969/12/31"
+    test_repo = MyCSVRepository()
 
-    check_puzzle = get_puzzle_by_date(test_date)
+    check_puzzle = test_repo.get_puzzle_by_date(test_date)
     assert check_puzzle == None
 
 if __name__ == '__main__':

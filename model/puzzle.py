@@ -28,6 +28,9 @@ class Clue:
     def __str__(self):
         return f"{self.lyric}, {self.genre}, {self.decade}s"
 
+    def __repr__(self):
+        return f'Clue("{self.lyric}", "{self.genre}", "{self.decade}")'
+
     def __eq__(self, other):
         if not isinstance(other, Clue):
             # don't attempt to compare against unrelated types
@@ -58,6 +61,9 @@ class Answer:
     def __str__(self):
         return f"{self.title}, {self.artist}"
 
+    def __repr__(self):
+        return f'Answer("{self.title}", "{self.artist}")'
+
     def __eq__(self, other):
         if not isinstance(other, Answer):
             # don't attempt to compare against unrelated types
@@ -86,15 +92,12 @@ class Puzzle:
         self.lyric_guess = ""
         self.artist_guess = ""
 
-    def get_answer(self, lyric_guess, artist_guess):
-        """I'd like to move this code (eventually) to the business logic, not the class"""
-        self.lyric_guess = lyric_guess
-        self.artist_guess = artist_guess
-        return (
-            f"You guessed {lyric_guess} by {artist_guess}. The answer is {self.answer.title} by {self.answer.artist}.")
 
     def __str__(self):
         return f'{self.clue}'
+
+    def __repr__(self):
+        return f'Puzzle("{self.date}", "{self.clue.lyric}", "{self.clue.genre}", "{self.clue.decade}", "{self.answer.title}", "{self.answer.artist}")'
 
     def __eq__(self, other):
         if not isinstance(other, Puzzle):
@@ -128,6 +131,9 @@ class Genre:
     def __str__(self):
         return f'{self.genre}'
 
+    def __repr__(self):
+        return f'Genre("{self.genre}")'
+
     def __eq__(self, other):
         if not isinstance(other, Genre):
             # don't attempt to compare against unrelated types
@@ -157,6 +163,9 @@ class Artist:
 
     def __str__(self):
         return f'{self.artist}'
+
+    def __repr__(self):
+        return f'Artist("{self.artist}")'
 
     def __eq__(self, other):
         if not isinstance(other, Artist):
