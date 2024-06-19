@@ -1,5 +1,4 @@
 import unittest
-from app.puzzle import *
 from db.reader import *
 
 """Import a row from the csv with a specific date and use it as the puzzle data"""

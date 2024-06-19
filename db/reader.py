@@ -1,5 +1,5 @@
 import csv
-from app.puzzle import Puzzle
+from model.puzzle import Puzzle
 
 FILEPATH = "db/song_list.csv"
 
