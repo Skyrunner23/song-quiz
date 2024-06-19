@@ -1,5 +1,3 @@
-import csv
-
 
 class Clue:
     """A class representing a clue for a puzzle.
@@ -56,7 +54,7 @@ class Puzzle:
     """A class representing a puzzle.
 
     Attributes:
-        date: The date of the puzzle.
+        date (str): The date of the puzzle, format is yyyy/mm/dd
         clue (Clue): The clue associated with the puzzle.
         answer (Answer): The answer associated with the puzzle.
         lyric_guess (str): A guess for the lyric of the song.
