@@ -16,24 +16,21 @@ class Services:
     def __init__(self):
         self.repo = db.csv_repository.MyCSVRepository()
 
-    def get_today(self) -> str:
+    def get_today(self) -> Clue:
         """return the clue for today's puzzle"""
         todaysdate = datetime.now().strftime(self.repo.DATEFORMAT)
         todayspuzzle = self.repo.get_puzzle_by_date(todaysdate)
         if todayspuzzle is None:
-            return "No puzzle for today"
+            return None
         else:
             return todayspuzzle.clue
 
-    def get_yesterday(self) -> str:
+    def get_yesterday(self) -> Puzzle:
         """return information for yesterday's puzzle"""
         yesterday = datetime.now() - timedelta(days=1)
         yesterdaysdate = yesterday.strftime(self.repo.DATEFORMAT)
         yesterdayspuzzle = self.repo.get_puzzle_by_date(yesterdaysdate)
-        if yesterdayspuzzle is None:
-            return "No puzzle for yesterday"
-        else:
-            return str(yesterdayspuzzle.clue), str(yesterdayspuzzle.answer)
+        return yesterdayspuzzle
 
 
 '''

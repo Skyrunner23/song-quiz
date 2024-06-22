@@ -7,7 +7,7 @@ from db.csv_repository import *
 def test_reader_positive():
     """make sure output is okay when puzzle is found"""
 
-    test_date = "2024/01/01"
+    test_date = "2000/01/01"
     test_lyric = "We've known each other for so long"
     test_genre = "Pop"
     test_year = 1980
