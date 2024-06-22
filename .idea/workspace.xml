@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f11da08e-1497-4406-bb23-1840fd9576bf" name="Changes" comment="updated equivalence for Puzzle etc objects, &amp; puzzle test">
-      <change afterPath="$PROJECT_DIR$/app/services.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/repository.py" afterDir="false" />
+    <list default="true" id="f11da08e-1497-4406-bb23-1840fd9576bf" name="Changes" comment="linting fixes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/reader.py" beforeDir="false" afterPath="$PROJECT_DIR$/db/reader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/notes.md" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/notes.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/services.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/song_list.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/song_list.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/reader.py" beforeDir="false" afterPath="$PROJECT_DIR$/db/csv_repository.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/puzzle.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/puzzle.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_reader.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_reader.py" afterDir="false" />
     </list>
@@ -37,16 +36,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python tests.Python tests in test_model.py.executor": "Run",
-    "Python tests.Python tests in test_reader.py.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/ejackson1/Development/song-quiz/tests",
-    "settings.editor.selected.configurable": "preferences.fileTypes"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python tests.Python tests in test_model.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test_reader.py.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/ejackson1/Development/song-quiz/tests&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/tests" />
@@ -98,13 +97,31 @@
       <option name="project" value="LOCAL" />
       <updated>1718833596288</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added __repr__ to model, updated model &amp; reader tests">
+      <option name="closed" value="true" />
+      <created>1718837189599</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1718837189599</updated>
+    </task>
+    <task id="LOCAL-00005" summary="linting fixes">
+      <option name="closed" value="true" />
+      <created>1718837486822</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1718837486822</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="moved the Puzzle and associated classes to module model/" />
     <MESSAGE value="testing updated for model and reader" />
     <MESSAGE value="updated equivalence for Puzzle etc objects, &amp; puzzle test" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated equivalence for Puzzle etc objects, &amp; puzzle test" />
+    <MESSAGE value="added __repr__ to model, updated model &amp; reader tests" />
+    <MESSAGE value="linting fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="linting fixes" />
   </component>
 </project>

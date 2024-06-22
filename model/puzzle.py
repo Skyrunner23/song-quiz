@@ -80,8 +80,6 @@ class Puzzle:
         date (str): The date of the puzzle, format is yyyy/mm/dd
         clue (Clue): The clue associated with the puzzle.
         answer (Answer): The answer associated with the puzzle.
-        lyric_guess (str): A guess for the lyric of the song.
-        artist_guess (str): A guess for the artist of the song.
     """
 
     def __init__(self, date, lyric, genre, year, title, artist):
@@ -89,8 +87,6 @@ class Puzzle:
         self.clue = Clue(lyric, genre, year)
         self.answer = Answer(title, artist)
 
-        self.lyric_guess = ""
-        self.artist_guess = ""
 
     def __str__(self):
         return f'{self.clue}'

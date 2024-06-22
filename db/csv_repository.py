@@ -2,14 +2,17 @@ import csv
 import os
 from model.puzzle import *
 from db.repository import PuzzleRepository
+from functools import lru_cache
 
 
 class MyCSVRepository(PuzzleRepository):
     FILEPATH = "../data/song_list.csv"
+    DATEFORMAT = "%Y/%m/%d"
 
     def __init__(self):
         super().__init__()
 
+    @lru_cache(maxsize=None)
     def get_puzzle_by_date(self, desired_date):
         """
         search the CSV file for a puzzle, based on the date
