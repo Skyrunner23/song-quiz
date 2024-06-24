@@ -1,4 +1,6 @@
+from dataclasses import dataclass
 
+@dataclass
 class Clue:
     """A class representing a clue for a puzzle.
 
@@ -19,6 +21,12 @@ class Clue:
         self.lyric = lyric
         self.genre = Genre(genre)
         self.decade = self._round_decade(year)
+
+
+    def serialize(self):
+        return {'lyric': self.lyric,
+                'genre': self.genre.serialize(),
+                'decade': self.decade}
 
     @staticmethod
     def _round_decade(year):
@@ -41,6 +49,7 @@ class Clue:
                self.decade == other.decade
 
 
+@dataclass
 class Answer:
     """A class representing an answer for a puzzle.
 
@@ -58,6 +67,10 @@ class Answer:
         self.title = title
         self.artist = Artist(artist)
 
+    def serialize(self):
+        return {'title': self.title,
+                'artist': self.artist.serialize()}
+
     def __str__(self):
         return f"{self.title}, {self.artist}"
 
@@ -73,6 +86,7 @@ class Answer:
                self.artist == other.artist
 
 
+@dataclass
 class Puzzle:
     """A class representing a puzzle.
 
@@ -86,6 +100,11 @@ class Puzzle:
         self.date = date
         self.clue = Clue(lyric, genre, year)
         self.answer = Answer(title, artist)
+
+    def serialize(self):
+        return {'date': self.date,
+                'clue': self.clue.serialize(),
+                'answer': self.answer.serialize()}
 
 
     def __str__(self):
@@ -104,6 +123,7 @@ class Puzzle:
                self.answer == other.answer
 
 
+@dataclass
 class Genre:
     """A class representing a music genre.
 
@@ -123,6 +143,9 @@ class Genre:
             raise ValueError(f'[Genre] invalid genre: {genre} is not in GENRE_SET')
         self.genre = genre
 
+    def serialize(self):
+        return str(self)
+
     def __str__(self):
         return f'{self.genre}'
 
@@ -137,6 +160,7 @@ class Genre:
         return self.genre == other.genre
 
 
+@dataclass
 class Artist:
     """A class representing an artist.
 
@@ -149,12 +173,17 @@ class Artist:
     """
     ARTIST_SET = {"Rick Astley", "Taylor Swift", "Weird Al", "Queen"}
 
+
     def __init__(self, artist):
         if not isinstance(artist, str):
             raise TypeError(f'[Artist] invalid artist type: {artist} should be str, is {type(artist)}')
         if artist not in self.ARTIST_SET:
             raise ValueError(f'[Artist] invalid artist: {artist} is not in ARTIST_SET')
         self.artist = artist
+
+
+    def serialize(self):
+        return str(self)
 
     def __str__(self):
         return f'{self.artist}'

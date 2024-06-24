@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f11da08e-1497-4406-bb23-1840fd9576bf" name="Changes" comment="created services layer with two functions (get_today, get_yesterday)">
-      <change afterPath="$PROJECT_DIR$/tests/test_services.py" afterDir="false" />
+    <list default="true" id="f11da08e-1497-4406-bb23-1840fd9576bf" name="Changes" comment="tests for services layer">
+      <change afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/services.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/services.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/song_list.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/song_list.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_reader.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_reader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/puzzle.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/puzzle.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Python Unit Test" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -36,16 +38,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python tests.Python tests in test_model.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_reader.py.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/ejackson1/Development/song-quiz/tests&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python tests.Python tests in test_model.py.executor": "Run",
+    "Python tests.Python tests in test_reader.py.executor": "Run",
+    "Python tests.Python tests in test_services.py.executor": "Run",
+    "Python.app.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/home/ejackson1/Development/song-quiz/tests",
+    "settings.editor.selected.configurable": "preferences.fileTypes"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/tests" />
@@ -56,6 +60,35 @@
       <recent name="$PROJECT_DIR$/data" />
       <recent name="$PROJECT_DIR$/model" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="song-quiz" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.app" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -121,8 +154,27 @@
       <option name="project" value="LOCAL" />
       <updated>1719097551293</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="tests for services layer">
+      <option name="closed" value="true" />
+      <created>1719100300965</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1719100300965</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="moved the Puzzle and associated classes to module model/" />
@@ -131,6 +183,7 @@
     <MESSAGE value="added __repr__ to model, updated model &amp; reader tests" />
     <MESSAGE value="linting fixes" />
     <MESSAGE value="created services layer with two functions (get_today, get_yesterday)" />
-    <option name="LAST_COMMIT_MESSAGE" value="created services layer with two functions (get_today, get_yesterday)" />
+    <MESSAGE value="tests for services layer" />
+    <option name="LAST_COMMIT_MESSAGE" value="tests for services layer" />
   </component>
 </project>

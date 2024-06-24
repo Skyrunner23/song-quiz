@@ -20,17 +20,20 @@ class Services:
         """return the clue for today's puzzle"""
         todaysdate = datetime.now().strftime(self.repo.DATEFORMAT)
         todayspuzzle = self.repo.get_puzzle_by_date(todaysdate)
-        if todayspuzzle is None:
-            return None
-        else:
+        if todayspuzzle:
             return todayspuzzle.clue
+        else:
+            return None
 
     def get_yesterday(self) -> Puzzle:
         """return information for yesterday's puzzle"""
         yesterday = datetime.now() - timedelta(days=1)
         yesterdaysdate = yesterday.strftime(self.repo.DATEFORMAT)
         yesterdayspuzzle = self.repo.get_puzzle_by_date(yesterdaysdate)
-        return yesterdayspuzzle
+        if yesterdayspuzzle:
+            return yesterdayspuzzle
+        else:
+            return None
 
 
 '''
