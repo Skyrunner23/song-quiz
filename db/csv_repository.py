@@ -36,7 +36,7 @@ class MyCSVRepository(PuzzleRepository):
         with open(os.path.join(os.path.dirname(__file__), self.PUZZLES), 'r') as puzzles:
             csv_reader = csv.reader(puzzles, delimiter=self.DELIMITER)
             next(csv_reader)
-            for date, lyric, genre, decade, title, artist in csv_reader:
+            for date, lyric, genre, year, title, artist in csv_reader:
                 # Validation:
                 #   artist: in self.get_artist() method, called below
                 #   genre: in Genre() object
@@ -47,7 +47,7 @@ class MyCSVRepository(PuzzleRepository):
                     normalized = str(self.get_artist(artist))
                     if normalized is not None and artist != normalized:
                         artist = normalized
-                    puzzle = Puzzle(date, lyric, genre, int(decade), title, artist)
+                    puzzle = Puzzle(date, lyric, genre, int(year), title, artist)
                     break
 
         return puzzle

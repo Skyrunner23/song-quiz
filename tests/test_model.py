@@ -5,12 +5,23 @@ from model.puzzle import *
 def test_clue():
     test_lyric = "We've known each other for so long"
     test_genre = "Pop"
-    test_year = 1980
+    test_year = 1987
     clue_out = "We've known each other for so long, Pop, 1980s"
     test_clue = Clue(test_lyric, test_genre, test_year)
 
     assert clue_out == str(test_clue)
 
+
+def test_clue_serialize():
+    test_lyric = "We've known each other for so long"
+    test_genre = "Pop"
+    test_year = 1987
+    clue_out = "We've known each other for so long, Pop, 1980s"
+    test_clue = Clue(test_lyric, test_genre, test_year)
+
+    serialized = test_clue.serialize()
+    assert isinstance(serialized, dict)
+    assert serialized['lyric'] == test_lyric and serialized['genre'] == test_genre and serialized['year'] == test_year
 
 def test_answer():
     test_artist = "Rick Astley"

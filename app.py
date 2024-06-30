@@ -1,6 +1,8 @@
-from flask import Flask, request, jsonify, make_response
+from flask import Flask, request, jsonify, make_response, render_template
+from flask_bootstrap import Bootstrap5
 from http import HTTPStatus
 from app.services import Services
+from datetime import datetime
 from logging.config import dictConfig
 from model.puzzle import *
 
@@ -23,7 +25,9 @@ dictConfig({
 
 # Endpoints:
 #  /today, will provide just the clue for today's puzzle as a JSON (GET)
-#  /yesterday, will provide all of yesterday's puzzle as a JSON (GET)
+#  /today?part=clue, same as /today
+#  /today?part=puzzle, will provide the whole of today's puzzle as a JSON (GET)
+#  /yesterday, will provide all of yesterday's (or the most recent day's) puzzle as a JSON (GET)
 #  /, will provide a web form with today's clue and yesterday's full puzzle (GET)
 #
 # Eventually, we'll want to
@@ -38,12 +42,22 @@ dictConfig({
 
 app = Flask(__name__)
 services = Services()
+bootstrap = Bootstrap5(app)
+
 
 @app.route("/")
-def hello():
-    return "Hello World!"
+def lyriquizz():
+    todaysdate = datetime.now().strftime(services.repo.DATEFORMAT)
+    clue = services.get_today(justclue=True)
+    if clue:
+        clue = clue.serialize()
+        return render_template('quiz.html', todaysdate=todaysdate,
+                           year=clue['year'], genre=clue['genre'], lyric=clue['lyric'])
+    else:
+        return render_template('nottoday.html')
 
-@app.route("/today")
+
+@app.route("/api/today")
 def today():
     # parameters: part=puzzle, part=clue (default)
     part = request.args.get('part')
@@ -62,7 +76,7 @@ def today():
         return jsonify(), HTTPStatus.NO_CONTENT
 
 
-@app.route("/yesterday")
+@app.route("/api/yesterday")
 def yesterday():
     puzzle = services.get_yesterday()
     if puzzle:
@@ -71,6 +85,7 @@ def yesterday():
         return response
     else:
         return jsonify(), HTTPStatus.NO_CONTENT
+
 
 if __name__ == "__main__":
     app.run()
