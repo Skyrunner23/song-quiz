@@ -134,7 +134,8 @@ class Genre:
         TypeError: If the type of `genre` is not a string.
         ValueError: If the provided genre is not in the predefined genre set.
     """
-    GENRE_SET = {"Rock", "Pop", "Metal", "Dance"}
+    GENRE_SET = {"Rock", "Pop Rock", "Alt Rock", "Pop", "Metal",
+                 "Dance"}
 
     def __init__(self, genre):
         if not isinstance(genre, str):
@@ -162,23 +163,19 @@ class Genre:
 
 @dataclass
 class Artist:
-    """A class representing an artist.
+    """A class representing an artist. No validation is performed.
 
     Attributes:
         artist (str): The artist name.
 
     Raises:
         TypeError: If the type of `artist` is not a string.
-        ValueError: If the provided artist is not in the predefined artist set.
     """
-    ARTIST_SET = {"Rick Astley", "Taylor Swift", "Weird Al", "Queen", "Boston"}
 
 
     def __init__(self, artist):
         if not isinstance(artist, str):
             raise TypeError(f'[Artist] invalid artist type: {artist} should be str, is {type(artist)}')
-        if artist not in self.ARTIST_SET:
-            raise ValueError(f'[Artist] invalid artist: {artist} is not in ARTIST_SET')
         self.artist = artist
 
 

@@ -29,14 +29,18 @@ class Services:
 
 
     def get_yesterday(self) -> Puzzle:
-        """return information for yesterday's puzzle"""
-        yesterday = datetime.now() - timedelta(days=1)
-        yesterdaysdate = yesterday.strftime(self.repo.DATEFORMAT)
-        yesterdayspuzzle = self.repo.get_puzzle_by_date(yesterdaysdate)
-        if yesterdayspuzzle:
-            return yesterdayspuzzle
-        else:
-            return None
+        """
+        return information for yesterday's puzzle, or if there is no puzzle
+          for yesterday, then return the most recent puzzle before today
+        """
+        range_to_consider = 7 # only check for the most recent 7 days
+        for delta in range(0,range_to_consider):
+            yesterday = datetime.now() - timedelta(days=(1+delta))
+            yesterdaysdate = yesterday.strftime(self.repo.DATEFORMAT)
+            yesterdayspuzzle = self.repo.get_puzzle_by_date(yesterdaysdate)
+            if yesterdayspuzzle:
+                return yesterdayspuzzle
+        return self.repo.DEFAULT
 
 
 '''

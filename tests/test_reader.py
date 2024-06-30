@@ -10,7 +10,7 @@ def test_reader_positive():
     test_date = "2000/01/01"
     test_lyric = "We've known each other for so long"
     test_genre = "Pop"
-    test_year = 1980
+    test_year = 1987
     test_artist = "Rick Astley"
     test_title = "Never Gonna Give You Up"
 
