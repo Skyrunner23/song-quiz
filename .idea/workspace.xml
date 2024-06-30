@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f11da08e-1497-4406-bb23-1840fd9576bf" name="Changes" comment="tests for services layer">
-      <change afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="f11da08e-1497-4406-bb23-1840fd9576bf" name="Changes" comment="basic functioning with Flask">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/services.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/services.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/song_list.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/song_list.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/csv_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/db/csv_repository.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/puzzle.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/puzzle.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,18 +37,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python tests.Python tests in test_model.py.executor": "Run",
-    "Python tests.Python tests in test_reader.py.executor": "Run",
-    "Python tests.Python tests in test_services.py.executor": "Run",
-    "Python.app.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/ejackson1/Development/song-quiz/tests",
-    "settings.editor.selected.configurable": "preferences.fileTypes"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python tests.Python tests in test_model.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test_reader.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test_services.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python.app.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/ejackson1/Development/song-quiz/tests&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/tests" />
@@ -93,7 +92,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-5b207ade9991-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.17890.14" />
+        <option value="bundled-python-sdk-975db3bf15a3-31b6be0877a2-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.18034.82" />
       </set>
     </attachedChunks>
   </component>
@@ -162,7 +161,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719100300965</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="basic functioning with Flask">
+      <option name="closed" value="true" />
+      <created>1719204607154</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1719204607154</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -184,6 +191,7 @@
     <MESSAGE value="linting fixes" />
     <MESSAGE value="created services layer with two functions (get_today, get_yesterday)" />
     <MESSAGE value="tests for services layer" />
-    <option name="LAST_COMMIT_MESSAGE" value="tests for services layer" />
+    <MESSAGE value="basic functioning with Flask" />
+    <option name="LAST_COMMIT_MESSAGE" value="basic functioning with Flask" />
   </component>
 </project>

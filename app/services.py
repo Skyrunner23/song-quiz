@@ -1,5 +1,5 @@
 from datetime import datetime, timedelta
-
+from typing import Union
 from model.puzzle import *
 import db.csv_repository
 
@@ -16,14 +16,17 @@ class Services:
     def __init__(self):
         self.repo = db.csv_repository.MyCSVRepository()
 
-    def get_today(self) -> Clue:
+    def get_today(self, justclue=True) -> Union[Clue, Puzzle]:
         """return the clue for today's puzzle"""
         todaysdate = datetime.now().strftime(self.repo.DATEFORMAT)
         todayspuzzle = self.repo.get_puzzle_by_date(todaysdate)
-        if todayspuzzle:
+        if todayspuzzle and justclue:
             return todayspuzzle.clue
+        elif todayspuzzle:
+            return todayspuzzle
         else:
             return None
+
 
     def get_yesterday(self) -> Puzzle:
         """return information for yesterday's puzzle"""

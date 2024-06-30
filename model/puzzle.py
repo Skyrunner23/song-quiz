@@ -5,9 +5,9 @@ class Clue:
     """A class representing a clue for a puzzle.
 
     Attributes:
-        lyric (str): The lyric associated with the clue.
-        genre (Genre): The genre associated with the clue.
-        decade (int): The decade of the clue's year.
+        lyric (str): The lyric associated with the clue
+        genre (Genre): The genre associated with the clue
+        year (int): The year of the clue
 
     Raises:
         TypeError: If the types of `lyric` or `year` are not as expected.
@@ -20,13 +20,13 @@ class Clue:
             raise TypeError(f'[Clue] invalid year type: {year} should be int, is {type(year)}')
         self.lyric = lyric
         self.genre = Genre(genre)
-        self.decade = self._round_decade(year)
+        self.year = year
 
 
     def serialize(self):
         return {'lyric': self.lyric,
                 'genre': self.genre.serialize(),
-                'decade': self.decade}
+                'year': self.year}
 
     @staticmethod
     def _round_decade(year):
@@ -34,10 +34,10 @@ class Clue:
         return int(year / 10) * 10
 
     def __str__(self):
-        return f"{self.lyric}, {self.genre}, {self.decade}s"
+        return f"{self.lyric}, {self.genre}, {self.year}s"
 
     def __repr__(self):
-        return f'Clue("{self.lyric}", "{self.genre}", "{self.decade}")'
+        return f'Clue("{self.lyric}", "{self.genre}", "{self.year}")'
 
     def __eq__(self, other):
         if not isinstance(other, Clue):
@@ -46,7 +46,7 @@ class Clue:
 
         return self.lyric == other.lyric and \
                self.genre == other.genre and \
-               self.decade == other.decade
+               self.year == other.year
 
 
 @dataclass
@@ -111,7 +111,7 @@ class Puzzle:
         return f'{self.clue}'
 
     def __repr__(self):
-        return f'Puzzle("{self.date}", "{self.clue.lyric}", "{self.clue.genre}", "{self.clue.decade}", "{self.answer.title}", "{self.answer.artist}")'
+        return f'Puzzle("{self.date}", "{self.clue.lyric}", "{self.clue.genre}", "{self.clue.year}", "{self.answer.title}", "{self.answer.artist}")'
 
     def __eq__(self, other):
         if not isinstance(other, Puzzle):
@@ -171,7 +171,7 @@ class Artist:
         TypeError: If the type of `artist` is not a string.
         ValueError: If the provided artist is not in the predefined artist set.
     """
-    ARTIST_SET = {"Rick Astley", "Taylor Swift", "Weird Al", "Queen"}
+    ARTIST_SET = {"Rick Astley", "Taylor Swift", "Weird Al", "Queen", "Boston"}
 
 
     def __init__(self, artist):

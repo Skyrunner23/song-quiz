@@ -45,9 +45,17 @@ def hello():
 
 @app.route("/today")
 def today():
-    clue = services.get_today()
-    if clue:
-        response = make_response(clue.serialize())
+    # parameters: part=puzzle, part=clue (default)
+    part = request.args.get('part')
+    if part in {'clue', None}:
+        justclue = True
+    elif part in {'puzzle'}:
+        justclue = False
+    else:
+        return jsonify(""), HTTPStatus.BAD_REQUEST
+    lookup = services.get_today(justclue=justclue)
+    if lookup:
+        response = make_response(lookup.serialize())
         response.status = HTTPStatus.OK
         return response
     else:
@@ -56,9 +64,9 @@ def today():
 
 @app.route("/yesterday")
 def yesterday():
-    clue = services.get_yesterday()
-    if clue:
-        response = make_response(clue.serialize())
+    puzzle = services.get_yesterday()
+    if puzzle:
+        response = make_response(puzzle.serialize())
         response.status = HTTPStatus.OK
         return response
     else:

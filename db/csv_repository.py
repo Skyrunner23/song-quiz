@@ -8,6 +8,12 @@ from functools import lru_cache
 class MyCSVRepository(PuzzleRepository):
     FILEPATH = "../data/song_list.csv"
     DATEFORMAT = "%Y/%m/%d"
+    DEFAULT = Puzzle("1970/01/01",
+                  "We've known each other for so long",
+                  "Rock",
+                  1987,
+                  "Never Gonna Give You Up",
+                  "Rick Astley")
 
     def __init__(self):
         super().__init__()
@@ -20,7 +26,7 @@ class MyCSVRepository(PuzzleRepository):
         If a matching date is found, return a Puzzle object containing that puzzle data
         If no matching puzzle is found, return None
         """
-        puzzle = None
+        puzzle = self.DEFAULT
 
         with open(os.path.join(os.path.dirname(__file__), self.FILEPATH), 'r') as puzzles:
             csv_reader = csv.reader(puzzles, delimiter="|")
