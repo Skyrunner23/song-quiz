@@ -4,24 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f11da08e-1497-4406-bb23-1840fd9576bf" name="Changes" comment="Flask templates started">
-      <change afterPath="$PROJECT_DIR$/data/.~lock.song_list.ods#" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/2023 December Lyrics and Solutions.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/2023 November Lyrics and Solutions.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/2024 February Lyrics and Solutions.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/2024 January Lyrics and Solutions.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/2024 July Lyrics and solutions.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/2024 June Lyrics with Solutions.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/2024 March Lyrics and Solutions.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/2024 May Lyrics.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/nottoday.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/quiz.html" afterDir="false" />
+    <list default="true" id="f11da08e-1497-4406-bb23-1840fd9576bf" name="Changes" comment="enter July 24 data">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/csv_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/db/csv_repository.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_model.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,7 +191,23 @@
       <option name="project" value="LOCAL" />
       <updated>1719724667500</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="delete lock">
+      <option name="closed" value="true" />
+      <created>1719724742112</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1719724742112</updated>
+    </task>
+    <task id="LOCAL-00013" summary="enter July 24 data">
+      <option name="closed" value="true" />
+      <created>1719844042558</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1719844042558</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -233,6 +233,8 @@
     <MESSAGE value="Flask API for today now accepts parameters" />
     <MESSAGE value="NEW: &quot;yesterday&quot; means &quot;most recent&quot;; updating song data, artists" />
     <MESSAGE value="Flask templates started" />
-    <option name="LAST_COMMIT_MESSAGE" value="Flask templates started" />
+    <MESSAGE value="delete lock" />
+    <MESSAGE value="enter July 24 data" />
+    <option name="LAST_COMMIT_MESSAGE" value="enter July 24 data" />
   </component>
 </project>
