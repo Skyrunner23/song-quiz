@@ -45,16 +45,23 @@ services = Services()
 bootstrap = Bootstrap5(app)
 
 
-@app.route("/")
+@app.route("/", methods=['GET'])
 def lyriquizz():
-    todaysdate = datetime.now().strftime(services.repo.DATEFORMAT)
+    now = datetime.now(tz=services.LOCALTZ)
     clue = services.get_today(justclue=True)
     if clue:
         clue = clue.serialize()
-        return render_template('quiz.html', todaysdate=todaysdate,
-                           year=clue['year'], genre=clue['genre'], lyric=clue['lyric'])
+        return render_template('quiz.html',
+                               todaysdate=now.strftime("%B %-d, %Y"),
+                               renderdatetime=now.strftime("%c"),
+                               year=clue['year'], genre=clue['genre'], lyric=clue['lyric'])
     else:
         return render_template('nottoday.html')
+
+
+@app.route("/result", methods=['POST'])
+def scorequiz():
+    print(str(request.form))
 
 
 @app.route("/api/today")

@@ -13,11 +13,11 @@ class MyCSVRepository(PuzzleRepository):
     DATEFORMAT = "%Y/%m/%d"
     DATEMATCH = r'\d{4}/\d{2}/\d{2}'
     DEFAULT = Puzzle("1970/01/01",
-                  "We've known each other for so long",
-                  "Rock",
-                  1987,
-                  "Never Gonna Give You Up",
-                  "Rick Astley")
+                     "We've known each other for so long",
+                     "Rock",
+                     1987,
+                     "Never Gonna Give You Up",
+                     "Rick Astley")
     DEFAULT = None
 
     def __init__(self):
@@ -59,12 +59,12 @@ class MyCSVRepository(PuzzleRepository):
         :param desired_artist:str
         :return: Artist() object that matches this string, or None
         """
-        #artist = self.DEFAULT.answer.artist
+        # artist = self.DEFAULT.answer.artist
         artist = None
 
         with open(os.path.join(os.path.dirname(__file__), self.ARTISTS), 'r') as artists:
             csv_reader = csv.reader(artists, delimiter=self.DELIMITER)
-            for id, artistname, pattern in csv_reader:
+            for uid, artistname, pattern in csv_reader:
                 if re.fullmatch(pattern, desired_artist.lower(), re.IGNORECASE):
                     artist = Artist(artistname)
                     break

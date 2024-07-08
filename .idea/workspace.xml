@@ -4,8 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f11da08e-1497-4406-bb23-1840fd9576bf" name="Changes" comment="enter July 24 data">
+    <list default="true" id="f11da08e-1497-4406-bb23-1840fd9576bf" name="Changes" comment="image resources">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/song-quiz.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/song-quiz.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/services.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/song_list.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/song_list.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/song_list.ods" beforeDir="false" afterPath="$PROJECT_DIR$/data/song_list.ods" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/song_list_test.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/song_list_test.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/csv_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/db/csv_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/mlejaxsplash-03.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/mlejaxsplash-03.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/mlejaxsplash-03.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/mlejaxsplash-03.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/quiz.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/quiz.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +36,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -33,19 +48,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Python tests.Python tests in test_model.py.executor": "Run",
-    "Python tests.Python tests in test_reader.py.executor": "Run",
-    "Python tests.Python tests in test_services.py.executor": "Run",
-    "Python.app.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/ejackson1/Development/song-quiz/templates",
-    "settings.editor.selected.configurable": "preferences.fileTypes"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Python tests.Python tests in test_model.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test_reader.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test_services.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python.app.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/ejackson1/Development/ling508-summer2024-pa1-lboos&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/templates" />
@@ -207,7 +222,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719844042558</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="image resources">
+      <option name="closed" value="true" />
+      <created>1719876202984</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1719876202984</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -235,6 +258,7 @@
     <MESSAGE value="Flask templates started" />
     <MESSAGE value="delete lock" />
     <MESSAGE value="enter July 24 data" />
-    <option name="LAST_COMMIT_MESSAGE" value="enter July 24 data" />
+    <MESSAGE value="image resources" />
+    <option name="LAST_COMMIT_MESSAGE" value="image resources" />
   </component>
 </project>

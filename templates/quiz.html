@@ -6,14 +6,53 @@
   </style>
 {% endblock %}
 {% block title %}Lyriquizz -- Today's quiz{% endblock %}
-{% block content %}
-  <div class="jumbotron">
-    <h1 class="display-4">Lyriquizz</h1>
-    <p class="lead">Today's date: {{ todaysdate }}</p>
-    <h2>Today's Song Clue</h2>
-      <p>{{ year }}, {{ genre }} </p>
-      <p>"{{ lyric }}"</p>
-    <h2>Don't miss a song!</h2>
-    <p>Sign up for tomorrow's clue!</p>
+{% block main %}
+  <div class="container my-5">
+    <div class="p-5 text-center bg-body-tertiary rounded-3">
+      <img src="{{url_for('static', filename='lyriquizz-logo.jpg')}}" width="250">
+      <h1 class="display-1 pacifico-regular">Lyriquizz</h1>
+      <p class="col-lg-8 mx-auto fs-5 text-muted" style="padding-top: 25px;">
+        {{ todaysdate }}
+      </p>
+    </div>
+
+    <div class="p-5 text-center bg-body-tertiary rounded-3">
+      <h1 class="text-body-emphasis">Today's song clue</h1>
+      <p class="lead">{{ year }}, {{ genre }}</p>
+      <p class="lead">"{{ lyric | safe}}"</p>
+      <h2 class="text-body-emphasis">Your guess</h2>
+      <form action="/result" method="POST">
+        <div class="row g-3 align-items-center">
+          <div class="col"></div>
+          <div class="col">
+            <div class="row">
+              <div class="col">
+                <label for="guessSongTitle" class="col-form-label">Song title</label>
+              </div>
+              <div class="col">
+                <input type="text" id="guessSongTitle" class="form-control">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <label for="guessArtist" class="form-label">Artist</label>
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" id="guessArtist">
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        <div class="col"></div>
+        </div>
+      </>
+    </div>
+
+    <div class="p-5 text-center bg-body-tertiary rounded-3">
+      <h2 class="text-body-emphasis">Don't miss a song!</h2>
+      <p class="col-lg-8 mx-auto fs-5 text-muted">
+        Sign up to have Lyriquizz clues delivered to your inbox!
+      </p>
+    </div>
   </div>
 {% endblock %}

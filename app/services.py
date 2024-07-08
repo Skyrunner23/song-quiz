@@ -1,4 +1,5 @@
 from datetime import datetime, timedelta
+from zoneinfo import ZoneInfo
 from typing import Union
 from model.puzzle import *
 import db.csv_repository
@@ -12,13 +13,14 @@ import db.csv_repository
 
 
 class Services:
+    LOCALTZ = ZoneInfo("America/Phoenix")
 
     def __init__(self):
         self.repo = db.csv_repository.MyCSVRepository()
 
-    def get_today(self, justclue=True) -> Union[Clue, Puzzle]:
+    def get_today(self, justclue=True) -> Union[Clue, Puzzle, None]:
         """return the clue for today's puzzle"""
-        todaysdate = datetime.now().strftime(self.repo.DATEFORMAT)
+        todaysdate = datetime.now(tz=self.LOCALTZ).strftime(self.repo.DATEFORMAT)
         todayspuzzle = self.repo.get_puzzle_by_date(todaysdate)
         if todayspuzzle and justclue:
             return todayspuzzle.clue
@@ -27,15 +29,14 @@ class Services:
         else:
             return None
 
-
     def get_yesterday(self) -> Puzzle:
         """
         return information for yesterday's puzzle, or if there is no puzzle
           for yesterday, then return the most recent puzzle before today
         """
-        range_to_consider = 7 # only check for the most recent 7 days
-        for delta in range(0,range_to_consider):
-            yesterday = datetime.now() - timedelta(days=(1+delta))
+        range_to_consider = 7  # only check for the most recent 7 days
+        for delta in range(0, range_to_consider):
+            yesterday = datetime.now(tz=self.LOCALTZ) - timedelta(days=(1+delta))
             yesterdaysdate = yesterday.strftime(self.repo.DATEFORMAT)
             yesterdayspuzzle = self.repo.get_puzzle_by_date(yesterdaysdate)
             if yesterdayspuzzle:
