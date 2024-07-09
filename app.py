@@ -49,14 +49,29 @@ bootstrap = Bootstrap5(app)
 def lyriquizz():
     now = datetime.now(tz=services.LOCALTZ)
     clue = services.get_today(justclue=True)
+    past = services.get_yesterday()
     if clue:
         clue = clue.serialize()
+        past = past.serialize()
         return render_template('quiz.html',
                                todaysdate=now.strftime("%B %-d, %Y"),
                                renderdatetime=now.strftime("%c"),
-                               year=clue['year'], genre=clue['genre'], lyric=clue['lyric'])
+                               year=clue['year'], genre=clue['genre'], lyric=clue['lyric'],
+                               past_date=past['date'],
+                               past_year=past['clue']['year'], past_genre=past['clue']['genre'],
+                               past_lyric=past['clue']['lyric'],
+                               past_song=past['answer']['title'],
+                               past_artist=past['answer']['artist'])
     else:
-        return render_template('nottoday.html')
+        past = past.serialize()
+        return render_template('nottoday.html',
+                               todaysdate=now.strftime("%B %-d, %Y"),
+                               renderdatetime=now.strftime("%c"),
+                               past_date=past['date'],
+                               past_year=past['clue']['year'], past_genre=past['clue']['genre'],
+                               past_lyric=past['clue']['lyric'],
+                               past_song=past['answer']['title'],
+                               past_artist=past['answer']['artist'])
 
 
 @app.route("/result", methods=['POST'])

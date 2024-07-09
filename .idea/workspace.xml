@@ -4,19 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f11da08e-1497-4406-bb23-1840fd9576bf" name="Changes" comment="image resources">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/song-quiz.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/song-quiz.iml" afterDir="false" />
+    <list default="true" id="f11da08e-1497-4406-bb23-1840fd9576bf" name="Changes" comment="partially working Flask server">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/services.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/services.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/song_list.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/song_list.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/song_list.ods" beforeDir="false" afterPath="$PROJECT_DIR$/data/song_list.ods" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/song_list_test.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/song_list_test.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/csv_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/db/csv_repository.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/mlejaxsplash-03.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/mlejaxsplash-03.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/mlejaxsplash-03.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/mlejaxsplash-03.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/puzzle.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/puzzle.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/quiz.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/quiz.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,7 +30,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -230,7 +223,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719876202984</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="partially working Flask server">
+      <option name="closed" value="true" />
+      <created>1720406647678</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1720406647678</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -259,6 +260,7 @@
     <MESSAGE value="delete lock" />
     <MESSAGE value="enter July 24 data" />
     <MESSAGE value="image resources" />
-    <option name="LAST_COMMIT_MESSAGE" value="image resources" />
+    <MESSAGE value="partially working Flask server" />
+    <option name="LAST_COMMIT_MESSAGE" value="partially working Flask server" />
   </component>
 </project>

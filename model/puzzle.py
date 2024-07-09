@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 
+
 @dataclass
 class Clue:
     """A class representing a clue for a puzzle.
@@ -21,7 +22,6 @@ class Clue:
         self.lyric = lyric
         self.genre = Genre(genre)
         self.year = year
-
 
     def serialize(self):
         return {'lyric': self.lyric,
@@ -106,7 +106,6 @@ class Puzzle:
                 'clue': self.clue.serialize(),
                 'answer': self.answer.serialize()}
 
-
     def __str__(self):
         return f'{self.clue}'
 
@@ -172,12 +171,10 @@ class Artist:
         TypeError: If the type of `artist` is not a string.
     """
 
-
     def __init__(self, artist):
         if not isinstance(artist, str):
             raise TypeError(f'[Artist] invalid artist type: {artist} should be str, is {type(artist)}')
         self.artist = artist
-
 
     def serialize(self):
         return str(self)

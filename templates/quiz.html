@@ -17,6 +17,14 @@
     </div>
 
     <div class="p-5 text-center bg-body-tertiary rounded-3">
+      <h1 class="text-body-emphasis">Previous song</h1>
+      <p class="lead">{{ past_date }}</p>
+      <p class="lead">{{ past_year }}, {{ past_genre }}</p>
+      <p class="lead">"{{ past_lyric | safe}}"</p>
+      <p class="lead"><em>{{ past_song }}</em> by {{ past_artist }}</p>
+    </div>
+
+    <div class="p-5 text-center bg-body-tertiary rounded-3">
       <h1 class="text-body-emphasis">Today's song clue</h1>
       <p class="lead">{{ year }}, {{ genre }}</p>
       <p class="lead">"{{ lyric | safe}}"</p>
