@@ -131,16 +131,11 @@ class Genre:
 
     Raises:
         TypeError: If the type of `genre` is not a string.
-        ValueError: If the provided genre is not in the predefined genre set.
     """
-    GENRE_SET = {"Rock", "Pop Rock", "Alt Rock", "Pop", "Metal",
-                 "Dance"}
 
     def __init__(self, genre):
         if not isinstance(genre, str):
             raise TypeError(f'[Genre] invalid genre type: {genre} should be string, is {type(genre)}')
-        if genre not in self.GENRE_SET:
-            raise ValueError(f'[Genre] invalid genre: {genre} is not in GENRE_SET')
         self.genre = genre
 
     def serialize(self):
