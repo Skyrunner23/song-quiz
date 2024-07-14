@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+import re
 
 
 @dataclass
@@ -34,7 +35,7 @@ class Clue:
         return int(year / 10) * 10
 
     def __str__(self):
-        return f"{self.lyric}, {self.genre}, {self.year}s"
+        return f"{self.lyric}, {self.genre}, {self.year}"
 
     def __repr__(self):
         return f'Clue("{self.lyric}", "{self.genre}", "{self.year}")'
@@ -186,3 +187,58 @@ class Artist:
             return NotImplemented
 
         return self.artist == other.artist
+
+
+@dataclass
+class Submission:
+    """A class representing a user's submitted answer for a puzzle.
+
+    Attributes:
+        name (str): The name of the submitter.
+        date (str): The date whose puzzle this is a submission for, format is yyyy/mm/dd.
+        title (str): The submitted song title.
+        artist (str): The submitted artist.
+
+    Only the name is required; the artist and song title can be blank.
+
+    The artist and song cannot comprise an Answer object, since the artist and
+    song title in an Answer will each be paired with a regular expression for grading.
+    """
+
+    def __init__(self, name, date, title="", artist=""):
+        if not isinstance(name, str):
+            raise TypeError(f'[Submission] invalid type: {name} should be str, is {type(name)}')
+        if name == "":
+            raise ValueError(f'[Submission] invalid value: {name} cannot be empty')
+        if not isinstance(date, str):
+            raise TypeError(f'[Submission] invalid type: {date} should be str, is {type(date)}')
+        if not re.fullmatch(r"\d{4}/\d{2}/\d{2}", date):
+            raise ValueError(f'[Submission] invalid value: {date} is not in yyyy/mm/dd format')
+        if not isinstance(title, str):
+            raise TypeError(f'[Submission] invalid type: {title} should be str, is {type(title)}')
+        if not isinstance(artist, str):
+            raise TypeError(f'[Submission] invalid type: {artist} should be str, is {type(artist)}')
+        self.name = name
+        self.date = date
+        self.title = title
+        self.artist = artist
+
+    def serialize(self):
+        return {'name': self.name, 'date': self.date, 'title': self.title,
+                'artist': self.artist}
+
+    def __str__(self):
+        return f"{self.name}, {self.date}, {self.title}, {self.artist}"
+
+    def __repr__(self):
+        return f'Submission("{self.name}", "{self.date}", "{self.title}", "{self.artist}")'
+
+    def __eq__(self, other):
+        if not isinstance(other, Submission):
+            # don't attempt to compare against unrelated types
+            return NotImplemented
+
+        return self.name == other.name and \
+            self.date == other.date and \
+            self.title == other.title and \
+            self.artist == other.artist
