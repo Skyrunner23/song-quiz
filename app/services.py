@@ -43,6 +43,20 @@ class Services:
                 return yesterdayspuzzle
         return self.repo.DEFAULT
 
+    def record_submission(self, user_sub: Submission) -> bool:
+        """
+        take in a user's submission for a puzzle and store it for grading
+
+        :param user_sub: A Submission object with date, name, title, artist
+        :return: True if successfully stored, else False
+        """
+        if not isinstance(user_sub, Submission):
+            raise TypeError(f'[Services] record_submission received invalid type: '
+                            f'{user_sub} should be Submission, is {type(user_sub)}')
+
+        result = self.repo.record_submission(user_sub)
+        return result
+
 
 '''
 From original code in Puzzle

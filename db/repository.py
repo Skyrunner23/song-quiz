@@ -8,3 +8,7 @@ class PuzzleRepository(metaclass=abc.ABCMeta):
     @abc.abstractmethod
     def get_puzzle_by_date(self, desired_date: str) -> Puzzle:
         raise NotImplementedError
+
+    @abc.abstractmethod
+    def record_submission(self, user_sub: Submission) -> bool:
+        raise NotImplementedError

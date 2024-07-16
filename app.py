@@ -76,7 +76,15 @@ def lyriquizz():
 
 @app.route("/result", methods=['POST'])
 def scorequiz():
-    print(str(request.form))
+    now = datetime.now(tz=services.LOCALTZ)
+    puzzledate = now.strftime(services.repo.DATEFORMAT)
+    user_name = request.form.get('guessUserName')
+    user_title = request.form.get('guessSongTitle')
+    user_artist = request.form.get('guessArtist')
+    user_sub = Submission(user_name, puzzledate, user_title, user_artist)
+    sub_status = services.record_submission(user_sub)
+    print(f"Submission status: {sub_status}")
+    #return render_template()
 
 
 @app.route("/api/today")

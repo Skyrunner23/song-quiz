@@ -71,6 +71,7 @@ def test_submission():
     assert test_sub1.title == test_title
     assert test_sub1.artist == test_artist
     test_sub3 = Submission(test_name, test_date)
+    assert test_sub3 is not None
     with pytest.raises(ValueError):
         test_sub2 = Submission(test_name, test_baddate)
     with pytest.raises(ValueError):

@@ -4,8 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f11da08e-1497-4406-bb23-1840fd9576bf" name="Changes" comment="update quiz template to include previous answer">
+    <list default="true" id="f11da08e-1497-4406-bb23-1840fd9576bf" name="Changes" comment="added Submission() class &amp; tests">
+      <change afterPath="$PROJECT_DIR$/data/submission_list.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/result.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/services.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/artist_list.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/artist_list.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/song_list.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/song_list.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/song_list.ods" beforeDir="false" afterPath="$PROJECT_DIR$/data/song_list.ods" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/csv_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/db/csv_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/db/repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/quiz.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/quiz.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_reader.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_CSV_repo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_services.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_services.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,19 +52,22 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
+    "Python tests.Python tests in test_CSV_repo.py.executor": "Run",
     "Python tests.Python tests in test_model.py.executor": "Run",
     "Python tests.Python tests in test_reader.py.executor": "Run",
     "Python tests.Python tests in test_services.py.executor": "Run",
     "Python.app.executor": "Run",
+    "Python.test_model.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/ejackson1/Documents/temp/ling508-summer2024-pa2-euangeleo",
+    "last_opened_file_path": "/home/ejackson1/Development/song-quiz/templates",
     "settings.editor.selected.configurable": "preferences.fileTypes"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/templates" />
+      <recent name="$PROJECT_DIR$/data" />
       <recent name="$PROJECT_DIR$/tests" />
       <recent name="$PROJECT_DIR$/model" />
       <recent name="$PROJECT_DIR$/app" />
@@ -234,7 +250,23 @@
       <option name="project" value="LOCAL" />
       <updated>1720494508791</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="removed genre validation; live test">
+      <option name="closed" value="true" />
+      <created>1720829844614</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1720829844614</updated>
+    </task>
+    <task id="LOCAL-00018" summary="added Submission() class &amp; tests">
+      <option name="closed" value="true" />
+      <created>1720920262236</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1720920262236</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -265,6 +297,8 @@
     <MESSAGE value="image resources" />
     <MESSAGE value="partially working Flask server" />
     <MESSAGE value="update quiz template to include previous answer" />
-    <option name="LAST_COMMIT_MESSAGE" value="update quiz template to include previous answer" />
+    <MESSAGE value="removed genre validation; live test" />
+    <MESSAGE value="added Submission() class &amp; tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="added Submission() class &amp; tests" />
   </component>
 </project>
