@@ -1,21 +1,5 @@
-{% extends "base.html" %}
-{% block head %}
-  {{ super() }}
-  <style type="text/css">
-    .important { color: #336699; }
-  </style>
-{% endblock %}
-{% block title %}Lyriquizz -- Today's quiz{% endblock %}
-{% block main %}
-  <div class="container my-5">
-    <div class="p-5 text-center bg-body-tertiary rounded-3">
-      <img src="{{url_for('static', filename='lyriquizz-logo.jpg')}}" width="250">
-      <h1 class="display-1 pacifico-regular">Lyriquizz</h1>
-      <p class="col-lg-8 mx-auto fs-5 text-muted" style="padding-top: 25px;">
-        {{ todaysdate }}
-      </p>
-    </div>
-
+{% extends "leadline.html" %}
+{% block content %}
     <div class="p-5 text-center bg-body-tertiary rounded-3">
       <h1 class="text-body-emphasis">Previous song</h1>
       <p class="lead">{{ past_date }}</p>
@@ -64,11 +48,4 @@
       </form>
     </div>
 
-    <div class="p-5 text-center bg-body-tertiary rounded-3">
-      <h2 class="text-body-emphasis">Don't miss a song!</h2>
-      <p class="col-lg-8 mx-auto fs-5 text-muted">
-        Sign up to have Lyriquizz clues delivered to your inbox!
-      </p>
-    </div>
-  </div>
 {% endblock %}

@@ -14,7 +14,7 @@ ID%artist%regex
 13%Avril Lavigne%avril lavig?ne
 14%Barenaked Ladies%(the )?bare ?naked ladies
 15%Bastille%bastill?e
-16%Bebe Rexha ft. Florida Georgia Line%bebe rexha( (ft.|featuring) florida georgia line)?
+16%Bebe Rexha ft. Florida Georgia Line%bebe rexha( (ft\.?|featuring) florida georgia line)?
 17%Billie Eilish%billie eilish
 18%Billy Ray Cyrus%billy ray cyrus
 19%Billy Squier%billy (squier|squire)
@@ -26,8 +26,8 @@ ID%artist%regex
 25%Camila Cabello%camill?a cabello
 26%Carl Carlton%carl carlton
 27%Celine Dion%celine dion
-28%Chamillionaire ft. Krayzie Bone%chamillionaire( (ft.|featuring) Krayzie Bone)?
-29%Coolio ft. L.V.%coolio( (ft.|featuring) L.?V.?)?
+28%Chamillionaire ft. Krayzie Bone%chamillionaire( (ft\.?|featuring) Krayzie Bone)?
+29%Coolio ft. L.V.%coolio( (ft\.?|featuring) L\.?V\.?)?
 30%Creedence Clearwater Revival%(the )?creedence clearwater revival
 31%Creepy John Thomas%(creepy )?john thomas
 32%Cyndi Lauper%cyndi lauper
@@ -93,10 +93,10 @@ ID%artist%regex
 92%the Beatles%(the )?beatles
 93%the Cars%(the )?cars
 94%the Chi-Lites%(the )?chi-lites
-95%the Go-Go's%(the )?go-?go[']?s
+95%the Go-Go's%(the )?go-?go['’]?s
 96%the Killers%(the )?killers
 97%the Knack%(the )?knack
-98%the Lovin’ Spoonful%(the )?lovin['g]? spoonful
+98%the Lovin’ Spoonful%(the )?lovin['’g]? spoonful
 99%the Police%(the )?police
 100%the Red Hot Chili Peppers%(the )?red hot chill?i peppers
 101%the Smiths%(the )?smiths

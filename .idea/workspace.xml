@@ -4,21 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f11da08e-1497-4406-bb23-1840fd9576bf" name="Changes" comment="added Submission() class &amp; tests">
-      <change afterPath="$PROJECT_DIR$/data/submission_list.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/result.html" afterDir="false" />
+    <list default="true" id="f11da08e-1497-4406-bb23-1840fd9576bf" name="Changes" comment="submission form now collects user's name, doesn't yet render result">
+      <change afterPath="$PROJECT_DIR$/templates/error.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/leadline.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/services.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/services.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/artist_list.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/artist_list.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/song_list.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/song_list.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/song_list.ods" beforeDir="false" afterPath="$PROJECT_DIR$/data/song_list.ods" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/csv_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/db/csv_repository.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/db/repository.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/quiz.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/quiz.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_reader.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_CSV_repo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_services.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_services.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/result.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/result.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -266,7 +259,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720920262236</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="submission form now collects user's name, doesn't yet render result">
+      <option name="closed" value="true" />
+      <created>1721156919382</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1721156919382</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -299,6 +300,7 @@
     <MESSAGE value="update quiz template to include previous answer" />
     <MESSAGE value="removed genre validation; live test" />
     <MESSAGE value="added Submission() class &amp; tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="added Submission() class &amp; tests" />
+    <MESSAGE value="submission form now collects user's name, doesn't yet render result" />
+    <option name="LAST_COMMIT_MESSAGE" value="submission form now collects user's name, doesn't yet render result" />
   </component>
 </project>

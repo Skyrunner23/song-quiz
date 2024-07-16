@@ -49,42 +49,56 @@ bootstrap = Bootstrap5(app)
 def lyriquizz():
     now = datetime.now(tz=services.LOCALTZ)
     clue = services.get_today(justclue=True)
-    past = services.get_yesterday()
-    if clue:
-        clue = clue.serialize()
-        past = past.serialize()
-        return render_template('quiz.html',
-                               todaysdate=now.strftime("%B %-d, %Y"),
-                               renderdatetime=now.strftime("%c"),
-                               year=clue['year'], genre=clue['genre'], lyric=clue['lyric'],
-                               past_date=past['date'],
-                               past_year=past['clue']['year'], past_genre=past['clue']['genre'],
-                               past_lyric=past['clue']['lyric'],
-                               past_song=past['answer']['title'],
-                               past_artist=past['answer']['artist'])
-    else:
-        past = past.serialize()
-        return render_template('nottoday.html',
-                               todaysdate=now.strftime("%B %-d, %Y"),
-                               renderdatetime=now.strftime("%c"),
-                               past_date=past['date'],
-                               past_year=past['clue']['year'], past_genre=past['clue']['genre'],
-                               past_lyric=past['clue']['lyric'],
-                               past_song=past['answer']['title'],
-                               past_artist=past['answer']['artist'])
+    past = services.get_yesterday().serialize()
+    if not clue:
+        return nottoday(now, past)
+    clue = clue.serialize()
+    return render_template('quiz.html',
+                            todaysdate=now.strftime("%B %-d, %Y"),
+                            renderdatetime=now.strftime("%c"),
+                            year=clue['year'], genre=clue['genre'], lyric=clue['lyric'],
+                            past_date=past['date'],
+                            past_year=past['clue']['year'],
+                            past_genre=past['clue']['genre'],
+                            past_lyric=past['clue']['lyric'],
+                            past_song=past['answer']['title'],
+                            past_artist=past['answer']['artist'])
 
 
 @app.route("/result", methods=['POST'])
 def scorequiz():
     now = datetime.now(tz=services.LOCALTZ)
-    puzzledate = now.strftime(services.repo.DATEFORMAT)
-    user_name = request.form.get('guessUserName')
-    user_title = request.form.get('guessSongTitle')
-    user_artist = request.form.get('guessArtist')
-    user_sub = Submission(user_name, puzzledate, user_title, user_artist)
-    sub_status = services.record_submission(user_sub)
-    print(f"Submission status: {sub_status}")
-    #return render_template()
+    puzzle = services.get_today(justclue=False)
+    if not puzzle:
+        past = services.get_yesterday().serialize()
+        return nottoday(now, past)
+
+    puzzle = puzzle.serialize()
+    puzzledate = puzzle['date']
+
+    #  Store user's submission
+    guessUserName = request.form.get('guessUserName')
+    guessSongTitle = request.form.get('guessSongTitle')
+    guessArtist = request.form.get('guessArtist')
+    sub_status = services.record_submission(Submission(guessUserName,
+                                                       puzzledate,
+                                                       guessSongTitle,
+                                                       guessArtist))
+
+    if not sub_status:
+        error_message = "app.py, scorequiz(): services.record_submission returned False"
+        return render_template('error.html', error_msg = error_message)
+
+    return render_template('result.html',
+                           todaysdate=now.strftime("%B %-d, %Y"),
+                           renderdatetime=now.strftime("%c"),
+                           year=puzzle['clue']['year'],
+                           genre=puzzle['clue']['genre'],
+                           lyric=puzzle['clue']['lyric'],
+                           title=puzzle['answer']['title'],
+                           artist=puzzle['answer']['artist'],
+                           user_title=guessSongTitle,
+                           user_artist=guessArtist)
 
 
 @app.route("/api/today")
@@ -115,6 +129,18 @@ def yesterday():
         return response
     else:
         return jsonify(), HTTPStatus.NO_CONTENT
+
+
+def nottoday(now, past):
+    return render_template('nottoday.html',
+                           todaysdate=now.strftime("%B %-d, %Y"),
+                           renderdatetime=now.strftime("%c"),
+                           past_date=past['date'],
+                           past_year=past['clue']['year'],
+                           past_genre=past['clue']['genre'],
+                           past_lyric=past['clue']['lyric'],
+                           past_song=past['answer']['title'],
+                           past_artist=past['answer']['artist'])
 
 
 if __name__ == "__main__":
