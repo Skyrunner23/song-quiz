@@ -1,4 +1,4 @@
 pytest
 Flask==3.0.3
-httpie==3.2.2
+#httpie==3.2.2
 bootstrap-flask==2.4.0

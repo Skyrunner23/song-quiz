@@ -87,7 +87,7 @@ def scorequiz():
 
     if not sub_status:
         error_message = "app.py, scorequiz(): services.record_submission returned False"
-        return render_template('error.html', error_msg = error_message)
+        return render_template('error.html', error_msg=error_message)
 
     return render_template('result.html',
                            todaysdate=now.strftime("%B %-d, %Y"),
@@ -144,4 +144,4 @@ def nottoday(now, past):
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host='0.0.0.0', port=5000)
