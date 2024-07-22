@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f11da08e-1497-4406-bb23-1840fd9576bf" name="Changes" comment="updated WSGI configuration files for /opt/">
+    <list default="true" id="f11da08e-1497-4406-bb23-1840fd9576bf" name="Changes" comment="update WSGI script for moving app.py to lyriquizz.py">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -310,7 +309,23 @@
       <option name="project" value="LOCAL" />
       <updated>1721606258217</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="moving app.py to lyriquizz.py">
+      <option name="closed" value="true" />
+      <created>1721608045151</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1721608045151</updated>
+    </task>
+    <task id="LOCAL-00027" summary="update WSGI script for moving app.py to lyriquizz.py">
+      <option name="closed" value="true" />
+      <created>1721608512701</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1721608512701</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -325,7 +340,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="moved the Puzzle and associated classes to module model/" />
     <MESSAGE value="testing updated for model and reader" />
     <MESSAGE value="updated equivalence for Puzzle etc objects, &amp; puzzle test" />
     <MESSAGE value="added __repr__ to model, updated model &amp; reader tests" />
@@ -349,6 +363,8 @@
     <MESSAGE value="adding WSGI configuration files" />
     <MESSAGE value="updated WSGI configuration files" />
     <MESSAGE value="updated WSGI configuration files for /opt/" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated WSGI configuration files for /opt/" />
+    <MESSAGE value="moving app.py to lyriquizz.py" />
+    <MESSAGE value="update WSGI script for moving app.py to lyriquizz.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="update WSGI script for moving app.py to lyriquizz.py" />
   </component>
 </project>

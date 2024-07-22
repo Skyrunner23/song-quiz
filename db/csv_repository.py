@@ -37,7 +37,7 @@ class MyCSVRepository(PuzzleRepository):
         """
         puzzle = self.DEFAULT
 
-        with open(os.path.join(os.path.dirname(__file__), self.PUZZLES), 'r') as puzzles:
+        with open(os.path.join(os.path.dirname(__file__), self.PUZZLES), 'r', encoding='utf-8') as puzzles:
             csv_reader = csv.reader(puzzles, delimiter=self.DELIMITER)
             next(csv_reader)
             for date, lyric, genre, year, title, artist in csv_reader:
@@ -66,7 +66,7 @@ class MyCSVRepository(PuzzleRepository):
         # artist = self.DEFAULT.answer.artist
         artist = None
 
-        with open(os.path.join(os.path.dirname(__file__), self.ARTISTS), 'r') as artists:
+        with open(os.path.join(os.path.dirname(__file__), self.ARTISTS), 'r', encoding='utf-8') as artists:
             csv_reader = csv.reader(artists, delimiter=self.DELIMITER)
             for uid, artistname, pattern in csv_reader:
                 if re.fullmatch(pattern, desired_artist.lower(), re.IGNORECASE):
@@ -88,7 +88,7 @@ class MyCSVRepository(PuzzleRepository):
                             f'{user_sub} should be Submission, is {type(user_sub)}')
 
         with open(os.path.join(os.path.dirname(__file__),
-                               self.SUBMISSIONS), 'a', newline='') as submissions:
+                               self.SUBMISSIONS), 'a', newline='', encoding='utf-8') as submissions:
             try:
                 csv_writer = csv.writer(submissions, delimiter=self.DELIMITER)
                 csv_writer.writerow([user_sub.name, user_sub.date, user_sub.title, user_sub.artist])
