@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f11da08e-1497-4406-bb23-1840fd9576bf" name="Changes" comment="csv_repository.py: path constants as os.path.relpath()">
+    <list default="true" id="f11da08e-1497-4406-bb23-1840fd9576bf" name="Changes" comment="csv_repository.py: path constants as os.path.relpath() tested">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/csv_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/db/csv_repository.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask.conf" beforeDir="false" afterPath="$PROJECT_DIR$/flask.conf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -343,7 +342,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721666447791</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="csv_repository.py: path constants as os.path.relpath() tested">
+      <option name="closed" value="true" />
+      <created>1721666505541</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1721666505541</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -358,7 +365,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added __repr__ to model, updated model &amp; reader tests" />
     <MESSAGE value="linting fixes" />
     <MESSAGE value="created services layer with two functions (get_today, get_yesterday)" />
     <MESSAGE value="tests for services layer" />
@@ -383,6 +389,7 @@
     <MESSAGE value="update WSGI script for moving app.py to lyriquizz.py" />
     <MESSAGE value="update csv_repository.py to open with UTF-8" />
     <MESSAGE value="csv_repository.py: path constants as os.path.relpath()" />
-    <option name="LAST_COMMIT_MESSAGE" value="csv_repository.py: path constants as os.path.relpath()" />
+    <MESSAGE value="csv_repository.py: path constants as os.path.relpath() tested" />
+    <option name="LAST_COMMIT_MESSAGE" value="csv_repository.py: path constants as os.path.relpath() tested" />
   </component>
 </project>

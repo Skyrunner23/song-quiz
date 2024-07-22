@@ -8,9 +8,11 @@ from functools import lru_cache
 
 
 class MyCSVRepository(PuzzleRepository):
-    PUZZLES = os.path.relpath("../data/song_list.csv")
-    ARTISTS = os.path.relpath("../data/artist_list.csv")
-    SUBMISSIONS = os.path.relpath("../data/submission_list.csv")
+    #ROOT = os.path.normpath("/opt/song-quiz/")
+    ROOT = os.path.dirname(__file__)
+    PUZZLES = "../data/song_list.csv"
+    ARTISTS = "../data/artist_list.csv"
+    SUBMISSIONS = "../data/submission_list.csv"
     DELIMITER = "%"
     DATEFORMAT = "%Y/%m/%d"
     DATEMATCH = r'\d{4}/\d{2}/\d{2}'
@@ -37,7 +39,8 @@ class MyCSVRepository(PuzzleRepository):
         """
         puzzle = self.DEFAULT
 
-        with open(os.path.join(os.path.dirname(__file__), self.PUZZLES), 'r', encoding='utf-8') as puzzles:
+        with open(os.path.normpath(os.path.join(self.ROOT, self.PUZZLES)),
+                  'r', encoding='utf-8') as puzzles:
             csv_reader = csv.reader(puzzles, delimiter=self.DELIMITER)
             next(csv_reader)
             for date, lyric, genre, year, title, artist in csv_reader:
@@ -66,7 +69,8 @@ class MyCSVRepository(PuzzleRepository):
         # artist = self.DEFAULT.answer.artist
         artist = None
 
-        with open(os.path.join(os.path.dirname(__file__), self.ARTISTS), 'r', encoding='utf-8') as artists:
+        with open(os.path.normpath(os.path.join(self.ROOT, self.ARTISTS)),
+                  'r', encoding='utf-8') as artists:
             csv_reader = csv.reader(artists, delimiter=self.DELIMITER)
             for uid, artistname, pattern in csv_reader:
                 if re.fullmatch(pattern, desired_artist.lower(), re.IGNORECASE):
@@ -87,8 +91,8 @@ class MyCSVRepository(PuzzleRepository):
             raise TypeError(f'[CSV_Repository] record_submission received invalid type: '
                             f'{user_sub} should be Submission, is {type(user_sub)}')
 
-        with open(os.path.join(os.path.dirname(__file__),
-                               self.SUBMISSIONS), 'a', newline='', encoding='utf-8') as submissions:
+        with open(os.path.normpath(os.path.join(self.ROOT, self.SUBMISSIONS)),
+                  'a', newline='', encoding='utf-8') as submissions:
             try:
                 csv_writer = csv.writer(submissions, delimiter=self.DELIMITER)
                 csv_writer.writerow([user_sub.name, user_sub.date, user_sub.title, user_sub.artist])
