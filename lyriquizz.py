@@ -5,6 +5,8 @@ from app.services import Services
 from datetime import datetime
 from logging.config import dictConfig
 from model.puzzle import *
+import re
+from unidecode import unidecode
 
 
 dictConfig({
@@ -77,9 +79,9 @@ def scorequiz():
     puzzledate = puzzle['date']
 
     #  Store user's submission
-    guessUserName = request.form.get('guessUserName')
-    guessSongTitle = request.form.get('guessSongTitle')
-    guessArtist = request.form.get('guessArtist')
+    guessUserName = sanitize_input(request.form.get('guessUserName'))
+    guessSongTitle = sanitize_input(request.form.get('guessSongTitle'))
+    guessArtist = sanitize_input(request.form.get('guessArtist'))
     sub_status = services.record_submission(Submission(guessUserName,
                                                        puzzledate,
                                                        guessSongTitle,
@@ -141,6 +143,12 @@ def nottoday(now, past):
                            past_lyric=past['clue']['lyric'],
                            past_song=past['answer']['title'],
                            past_artist=past['answer']['artist'])
+
+
+def sanitize_input(incoming: str) -> str:
+    """keep only ascii text and limited punctuation"""
+    allowed = re.compile(r"[^,.?!\w\s]", flags=re.IGNORECASE)
+    return re.sub(allowed, '', unidecode(incoming))
 
 
 if __name__ == "__main__":

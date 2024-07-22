@@ -1,6 +1,5 @@
 import csv
 import os
-import re
 import logging
 from model.puzzle import *
 from db.repository import PuzzleRepository
@@ -78,6 +77,7 @@ class MyCSVRepository(PuzzleRepository):
                     break
 
         return artist
+
 
     def record_submission(self, user_sub: Submission) -> bool:
         """

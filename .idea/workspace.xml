@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f11da08e-1497-4406-bb23-1840fd9576bf" name="Changes" comment="csv_repository.py: path constants as os.path.relpath() tested">
+    <list default="true" id="f11da08e-1497-4406-bb23-1840fd9576bf" name="Changes" comment="csv_repository.py: fixing path constants with os.path.normpath()">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/csv_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/db/csv_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lyriquizz.py" beforeDir="false" afterPath="$PROJECT_DIR$/lyriquizz.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -350,7 +352,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721666505541</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="csv_repository.py: fixing path constants with os.path.normpath()">
+      <option name="closed" value="true" />
+      <created>1721667613139</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1721667613139</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -365,7 +375,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="linting fixes" />
     <MESSAGE value="created services layer with two functions (get_today, get_yesterday)" />
     <MESSAGE value="tests for services layer" />
     <MESSAGE value="basic functioning with Flask" />
@@ -390,6 +399,7 @@
     <MESSAGE value="update csv_repository.py to open with UTF-8" />
     <MESSAGE value="csv_repository.py: path constants as os.path.relpath()" />
     <MESSAGE value="csv_repository.py: path constants as os.path.relpath() tested" />
-    <option name="LAST_COMMIT_MESSAGE" value="csv_repository.py: path constants as os.path.relpath() tested" />
+    <MESSAGE value="csv_repository.py: fixing path constants with os.path.normpath()" />
+    <option name="LAST_COMMIT_MESSAGE" value="csv_repository.py: fixing path constants with os.path.normpath()" />
   </component>
 </project>
