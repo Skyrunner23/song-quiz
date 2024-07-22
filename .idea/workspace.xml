@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f11da08e-1497-4406-bb23-1840fd9576bf" name="Changes" comment="update WSGI script for moving app.py to lyriquizz.py">
+    <list default="true" id="f11da08e-1497-4406-bb23-1840fd9576bf" name="Changes" comment="update csv_repository.py to open with UTF-8">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask.conf" beforeDir="false" afterPath="$PROJECT_DIR$/flask.conf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -325,7 +326,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721608512701</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="update csv_repository.py to open with UTF-8">
+      <option name="closed" value="true" />
+      <created>1721609078670</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1721609078670</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -340,7 +349,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="testing updated for model and reader" />
     <MESSAGE value="updated equivalence for Puzzle etc objects, &amp; puzzle test" />
     <MESSAGE value="added __repr__ to model, updated model &amp; reader tests" />
     <MESSAGE value="linting fixes" />
@@ -365,6 +373,7 @@
     <MESSAGE value="updated WSGI configuration files for /opt/" />
     <MESSAGE value="moving app.py to lyriquizz.py" />
     <MESSAGE value="update WSGI script for moving app.py to lyriquizz.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="update WSGI script for moving app.py to lyriquizz.py" />
+    <MESSAGE value="update csv_repository.py to open with UTF-8" />
+    <option name="LAST_COMMIT_MESSAGE" value="update csv_repository.py to open with UTF-8" />
   </component>
 </project>

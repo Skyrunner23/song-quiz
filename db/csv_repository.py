@@ -8,9 +8,9 @@ from functools import lru_cache
 
 
 class MyCSVRepository(PuzzleRepository):
-    PUZZLES = "../data/song_list.csv"
-    ARTISTS = "../data/artist_list.csv"
-    SUBMISSIONS = "../data/submission_list.csv"
+    PUZZLES = os.path.relpath("../data/song_list.csv")
+    ARTISTS = os.path.relpath("../data/artist_list.csv")
+    SUBMISSIONS = os.path.relpath("../data/submission_list.csv")
     DELIMITER = "%"
     DATEFORMAT = "%Y/%m/%d"
     DATEMATCH = r'\d{4}/\d{2}/\d{2}'
