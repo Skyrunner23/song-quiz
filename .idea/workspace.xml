@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f11da08e-1497-4406-bb23-1840fd9576bf" name="Changes" comment="updated WSGI configuration files for /opt/">
-      <change beforePath="$PROJECT_DIR$/flask.conf" beforeDir="false" afterPath="$PROJECT_DIR$/flask.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lyriquizz.wsgi" beforeDir="false" afterPath="$PROJECT_DIR$/lyriquizz.wsgi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -302,7 +302,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721605304664</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="updated WSGI configuration files for /opt/">
+      <option name="closed" value="true" />
+      <created>1721606258217</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1721606258217</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
