@@ -106,3 +106,32 @@ ID%artist%regex
 105%TOTO%toto
 106%U2%u2
 107%Whitney Houston%whitney houston
+108%Sade%sade
+109%Commodores%(the )?commodores
+110%Cure%(the )?cure
+111%Bobby Darin%bobby darin
+112%Nancy Sinatra%nancy sinatra
+113%OMI%omi
+114%Stevie Wonder%stevie wonder
+115%Van Morrison%van morrison
+116%Midnight Oil%midnight oil
+117%Diana Ross%diana ross
+118%Chumbawamba%chumbawamba
+119%Bob Marley%bob marley
+120%Walkers%(the )?walkers
+121%Bob Marley & the Walkers%bob marley( (&|and) the walkers)?
+122%Us3%Us(3| 3|three)
+123%Rahsaan%rahsaan
+124%Gerard Presencer%gerard presencer
+125%Us3, Rahsaan, Gerard Presencer%us3 rahsaan gerard presencer
+126%The Music man%(the )?music man
+127%Mighty Mighty Bosstones%mighty mighty bosstones
+128%Jon Batiste%jo(h)?n batiste
+129%Louis Armstrong%(louis|louie) armstrong
+130%Natalie Cole%natalie cole
+131%Frankie Vallie%frankie vall(ie/ey)
+132%Gloria Estefan%gloria estefan
+133%Miami Sound Machine%miami sound machine
+134%Gloria Estefan and Miami Sound Machine%gloria estefan (and|&) miami sound machine
+135%Dan Fogelberg%dan fogelb(e|u)rg
+136%Phil Collins%phil col(l)?ins
