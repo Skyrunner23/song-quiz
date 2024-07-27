@@ -31,8 +31,8 @@ def test_clue_serialize():
         assert serialized[attribute_label] == attribute_value
 
 
-def test_answer_onj():
-    sample_answer = Answer(sample_title, sample_artist, sample_artistmatch)
+def test_answer_obj():
+    sample_answer = Answer(sample_title, sample_titlematch, sample_artist, sample_artistmatch)
     assert sample_answer_out == str(sample_answer)
 
 
@@ -87,11 +87,11 @@ def test_grade_submission():
     sample_puzzle = Puzzle(sample_date, sample_lyric, sample_genre,
                            sample_year, sample_title, sample_titlematch,
                            sample_artist, sample_artistmatch)
-    assert sample_puzzle.grade(sample_sub1) == True
-    assert sample_puzzle.grade(sample_sub2) == True
-    assert sample_puzzle.grade(sample_sub3) == True
-    assert sample_puzzle.grade(sample_sub4) == False
-    assert sample_puzzle.grade(sample_sub5) == False
+    assert sample_puzzle.answer.grade(sample_sub1) == True
+    assert sample_puzzle.answer.grade(sample_sub2) == True
+    assert sample_puzzle.answer.grade(sample_sub3) == True
+    assert sample_puzzle.answer.grade(sample_sub4) == False
+    assert sample_puzzle.answer.grade(sample_sub5) == False
 
 
 if __name__ == '__main__':
