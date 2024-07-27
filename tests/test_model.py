@@ -9,11 +9,14 @@ sample_year = 1987
 sample_clue_pairs = [('lyric', sample_lyric), ('genre', sample_genre), ('year', sample_year)]
 sample_clue_out = "We've known each other for so long, Pop, 1987"
 sample_artist = "Rick Astley"
+sample_artistmatch = r"rick? astley"
 sample_title = "Never Gonna Give You Up"
+sample_titlematch = r"never (gonna|going to) give you up"
 sample_answer_out = 'Never Gonna Give You Up, Rick Astley'
 sample_name = "Wilbur Wildcat"
 sample_baddate = "Sasquatch"
 sample_submission_pairs = [('name', sample_name), ('date', sample_date), ('title', sample_title), ('artist', sample_artist)]
+
 
 def test_clue_obj():
     sample_clue = Clue(sample_lyric, sample_genre, sample_year)
@@ -29,13 +32,14 @@ def test_clue_serialize():
 
 
 def test_answer_onj():
-    sample_answer = Answer(sample_title, sample_artist)
+    sample_answer = Answer(sample_title, sample_artist, sample_artistmatch)
     assert sample_answer_out == str(sample_answer)
 
 
 def test_puzzle_obj():
     sample_puzzle = Puzzle(sample_date, sample_lyric, sample_genre,
-                         sample_year, sample_title, sample_artist)
+                           sample_year, sample_title, sample_titlematch,
+                           sample_artist, sample_artistmatch)
     assert str(sample_puzzle.clue) == sample_clue_out
     assert str(sample_puzzle.answer) == sample_answer_out
     assert str(sample_puzzle.date) == sample_date
@@ -54,20 +58,40 @@ def test_submission():
     assert sample_sub1.date == sample_date
     assert sample_sub1.title == sample_title
     assert sample_sub1.artist == sample_artist
-    test_sub3 = Submission(sample_name, sample_date)
-    assert test_sub3 is not None
+    sample_sub3 = Submission(sample_name, sample_date)
+    assert sample_sub3 is not None
     with pytest.raises(ValueError):
-        test_sub2 = Submission(sample_name, sample_baddate)
+        sample_sub2 = Submission(sample_name, sample_baddate)
     with pytest.raises(ValueError):
-        test_sub2 = Submission("", sample_date)
+        sample_sub2 = Submission("", sample_date)
     with pytest.raises(TypeError):
-        test_sub2 = Submission(1, sample_date)
+        sample_sub2 = Submission(1, sample_date)
     with pytest.raises(TypeError):
-        test_sub2 = Submission(sample_name, 1987, sample_title, sample_artist)
+        sample_sub2 = Submission(sample_name, 1987, sample_title, sample_artist)
     with pytest.raises(TypeError):
-        test_sub2 = Submission(sample_name, sample_date, 1987, sample_artist)
+        sample_sub2 = Submission(sample_name, sample_date, 1987, sample_artist)
     with pytest.raises(TypeError):
-        test_sub2 = Submission(sample_name, sample_date, sample_title, 1987)
+        sample_sub2 = Submission(sample_name, sample_date, sample_title, 1987)
+
+
+def test_grade_submission():
+    sample_sub1 = Submission(sample_name, sample_date, sample_title, sample_artist)
+    sample_sub2 = Submission(sample_name, sample_date,
+                             "Never gOiNg TO give you up", sample_artist)
+    sample_sub3 = Submission(sample_name, sample_date,
+                             sample_title, "rIk astley")
+    sample_sub4 = Submission(sample_name, sample_date,
+                             "Never", sample_artist)
+    sample_sub5 = Submission(sample_name, sample_date,
+                             sample_title, "astley")
+    sample_puzzle = Puzzle(sample_date, sample_lyric, sample_genre,
+                           sample_year, sample_title, sample_titlematch,
+                           sample_artist, sample_artistmatch)
+    assert sample_puzzle.grade(sample_sub1) == True
+    assert sample_puzzle.grade(sample_sub2) == True
+    assert sample_puzzle.grade(sample_sub3) == True
+    assert sample_puzzle.grade(sample_sub4) == False
+    assert sample_puzzle.grade(sample_sub5) == False
 
 
 if __name__ == '__main__':
