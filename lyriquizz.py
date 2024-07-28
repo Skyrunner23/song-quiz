@@ -26,11 +26,13 @@ dictConfig({
 })
 
 # Endpoints:
-#  /today, will provide just the clue for today's puzzle as a JSON (GET)
-#  /today?part=clue, same as /today
-#  /today?part=puzzle, will provide the whole of today's puzzle as a JSON (GET)
-#  /yesterday, will provide all of yesterday's (or the most recent day's) puzzle as a JSON (GET)
+#  /api/today, will provide just the clue for today's puzzle as a JSON (GET)
+#  /api/today?part=clue, same as /today
+#  /api/today?part=puzzle, will provide the whole of today's puzzle as a JSON (GET)
+#  /api/yesterday, will provide all of yesterday's (or the most recent day's) puzzle as a JSON (GET)
+#  /api/submit, will handle submissions not from the web form
 #  /, will provide a web form with today's clue and yesterday's full puzzle (GET)
+#  /result, handles submission/grading from web form (POST)
 #
 # Eventually, we'll want to
 #  (0) receive guesses, add to a database? (current G Forms functionality)
@@ -75,32 +77,32 @@ def scorequiz():
         past = services.get_yesterday().serialize()
         return nottoday(now, past)
 
-    puzzle = puzzle.serialize()
-    puzzledate = puzzle['date']
+    puzzledate = puzzle.date
 
     #  Store user's submission
     guessUserName = sanitize_input(request.form.get('guessUserName'))
     guessSongTitle = sanitize_input(request.form.get('guessSongTitle'))
     guessArtist = sanitize_input(request.form.get('guessArtist'))
-    sub_status = services.record_submission(Submission(guessUserName,
-                                                       puzzledate,
-                                                       guessSongTitle,
-                                                       guessArtist))
+    userSub = Submission(guessUserName, puzzledate, guessSongTitle, guessArtist)
+    sub_status = services.record_submission(userSub)
 
     if not sub_status:
         error_message = "app.py, scorequiz(): services.record_submission returned False"
         return render_template('error.html', error_msg=error_message)
 
+    userscore = puzzle.answer.grade(userSub)
+
     return render_template('result.html',
                            todaysdate=now.strftime("%B %-d, %Y"),
                            renderdatetime=now.strftime("%c"),
-                           year=puzzle['clue']['year'],
-                           genre=puzzle['clue']['genre'],
-                           lyric=puzzle['clue']['lyric'],
-                           title=puzzle['answer']['title'],
-                           artist=puzzle['answer']['artist'],
+                           year=puzzle.clue.year,
+                           genre=puzzle.clue.genre,
+                           lyric=puzzle.clue.lyric,
+                           title=puzzle.answer.title,
+                           artist=puzzle.answer.artist,
                            user_title=guessSongTitle,
-                           user_artist=guessArtist)
+                           user_artist=guessArtist,
+                           userscore=userscore)
 
 
 @app.route("/api/today")
