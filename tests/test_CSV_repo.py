@@ -62,7 +62,7 @@ def test_submit():
     with pytest.raises(TypeError):
         test3 = test_repo.record_submission((test_name, test_date))
 
-    with open(test_repo.SUBMISSIONS, 'r') as sub:
+    with open(os.path.normpath(os.path.join(test_repo.ROOT, test_repo.SUBMISSIONS)), 'r') as sub:
         linecount_after = len(sub.readlines())
 
     assert linecount_after == linecount_before + 2
