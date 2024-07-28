@@ -98,13 +98,5 @@ def test_grade_submission():
     assert sample_puzzle.answer.grade(sample_sub5) == sample_key5
 
 
-def test_grades_in_data():
-    pass
-
-
-def open_data():
-    pass
-
-
 if __name__ == '__main__':
     unittest.main()
