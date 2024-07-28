@@ -43,7 +43,7 @@ def test_submit():
     test_title = "Never Gonna Give You Up"
     test_repo = MyCSVRepository()
 
-    with open(test_repo.SUBMISSIONS, 'r') as sub:
+    with open(os.path.normpath(os.path.join(test_repo.ROOT, test_repo.SUBMISSIONS)), 'r') as sub:
         linecount_before = len(sub.readlines())
 
     # First test: full submission
