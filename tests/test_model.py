@@ -9,13 +9,14 @@ sample_year = 1987
 sample_clue_pairs = [('lyric', sample_lyric), ('genre', sample_genre), ('year', sample_year)]
 sample_clue_out = "We've known each other for so long, Pop, 1987"
 sample_artist = "Rick Astley"
-sample_artistmatch = r"rick? astley"
+sample_artistmatch = r"ric?k astley"
 sample_title = "Never Gonna Give You Up"
 sample_titlematch = r"never (gonna|going to) give you up"
 sample_answer_out = 'Never Gonna Give You Up, Rick Astley'
 sample_name = "Wilbur Wildcat"
 sample_baddate = "Sasquatch"
-sample_submission_pairs = [('name', sample_name), ('date', sample_date), ('title', sample_title), ('artist', sample_artist)]
+sample_submission_pairs = [('name', sample_name), ('date', sample_date),
+                           ('title', sample_title), ('artist', sample_artist)]
 
 
 def test_clue_obj():
@@ -76,22 +77,33 @@ def test_submission():
 
 def test_grade_submission():
     sample_sub1 = Submission(sample_name, sample_date, sample_title, sample_artist)
+    sample_key1 = {'title': True, 'artist': True}
     sample_sub2 = Submission(sample_name, sample_date,
                              "Never gOiNg TO give you up", sample_artist)
     sample_sub3 = Submission(sample_name, sample_date,
                              sample_title, "rIk astley")
     sample_sub4 = Submission(sample_name, sample_date,
                              "Never", sample_artist)
+    sample_key4 = {'title': False, 'artist': True}
     sample_sub5 = Submission(sample_name, sample_date,
                              sample_title, "astley")
+    sample_key5 = {'title': True, 'artist': False}
     sample_puzzle = Puzzle(sample_date, sample_lyric, sample_genre,
                            sample_year, sample_title, sample_titlematch,
                            sample_artist, sample_artistmatch)
-    assert sample_puzzle.answer.grade(sample_sub1) == True
-    assert sample_puzzle.answer.grade(sample_sub2) == True
-    assert sample_puzzle.answer.grade(sample_sub3) == True
-    assert sample_puzzle.answer.grade(sample_sub4) == False
-    assert sample_puzzle.answer.grade(sample_sub5) == False
+    assert sample_puzzle.answer.grade(sample_sub1) == sample_key1
+    assert sample_puzzle.answer.grade(sample_sub2) == sample_key1
+    assert sample_puzzle.answer.grade(sample_sub3) == sample_key1
+    assert sample_puzzle.answer.grade(sample_sub4) == sample_key4
+    assert sample_puzzle.answer.grade(sample_sub5) == sample_key5
+
+
+def test_grades_in_data():
+    pass
+
+
+def open_data():
+    pass
 
 
 if __name__ == '__main__':

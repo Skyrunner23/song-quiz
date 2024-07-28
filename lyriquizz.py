@@ -146,9 +146,11 @@ def nottoday(now, past):
 
 
 def sanitize_input(incoming: str) -> str:
-    """keep only ascii text and limited punctuation"""
+    """keep only ascii text and limited punctuation, whitespace to one"""
     allowed = re.compile(r"[^,.?!\w\s]", flags=re.IGNORECASE)
-    return re.sub(allowed, '', unidecode(incoming))
+    incoming = re.sub(allowed, '', unidecode(incoming))
+    incoming = re.sub(r'\s+', ' ', incoming)
+    return incoming
 
 
 if __name__ == "__main__":

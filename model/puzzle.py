@@ -112,7 +112,7 @@ class Answer:
     Parameters:
         title (str): The title of the song.
         titlematch (str): A regex for matching the title
-        artist (Artist): The artist of the song.
+        artist (str): The artist of the song.
         artistmatch (str): A regex for matching the artist
 
     Methods:
@@ -123,19 +123,37 @@ class Answer:
     """
 
     def __init__(self, title, titlematch, artist, artistmatch):
-        for param in [title, titlematch]:
+        for param in [title, titlematch, artist, artistmatch]:
             if not isinstance(param, str):
-                raise TypeError(f'[Answer] invalid lyric type: {param} should be str, is {type(param)}')
+                raise TypeError(f'[Answer] invalid type: {param} should be str, is {type(param)}')
         self.title = title
         self._titlematch = titlematch
-        self.artist = Artist(artist, artistmatch)
+        self._artist = Artist(artist, artistmatch)
+        self.artist = self._artist.artist
+        # A bit of a fudge:
+        self._artistmatch = self._artist._artistmatch
 
     def serialize(self) -> dict:
         return {'title': self.title,
-                'artist': self.artist.serialize()}
+                'artist': self._artist.serialize()}
 
-    def grade(self, submission: Submission) -> bool:
-        return True if submission else False
+    def grade(self, submission: Submission) -> dict:
+        """
+        Grade a Submission against this Answer
+
+        :param submission:
+        :return: a dictionary with the following format:
+        {'title': True/False, 'artist': True/False}
+            each value is True if the submission matches, else False
+        """
+        components = ['title', 'artist']
+        gradingkeys = ['_titlematch', '_artistmatch']
+        grade = {component: False for component in components}
+        for component, gradingkey in zip(components, gradingkeys):
+            tograde = getattr(submission, component)
+            gradeagainst = getattr(self, gradingkey)
+            grade[component] = True if re.fullmatch(gradeagainst, tograde, flags=re.I) else False
+        return grade
 
     def __str__(self):
         return f"{self.title}, {self.artist}"
@@ -255,4 +273,3 @@ class Artist:
             return NotImplemented
 
         return self.artist == other.artist
-
