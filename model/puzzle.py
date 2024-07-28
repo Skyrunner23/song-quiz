@@ -128,14 +128,14 @@ class Answer:
                 raise TypeError(f'[Answer] invalid type: {param} should be str, is {type(param)}')
         self.title = title
         self._titlematch = titlematch
-        self._artist = Artist(artist, artistmatch)
-        self.artist = self._artist.artist
+        self._artistobj = Artist(artist, artistmatch)
+        self.artist = self._artistobj.artist
         # A bit of a fudge:
-        self._artistmatch = self._artist._artistmatch
+        self._artistmatch = self._artistobj.artistmatch
 
     def serialize(self) -> dict:
         return {'title': self.title,
-                'artist': self._artist.serialize()}
+                'artist': self.artist}
 
     def grade(self, submission: Submission) -> dict:
         """
@@ -256,10 +256,10 @@ class Artist:
             if not isinstance(param, str):
                 raise TypeError(f'[Artist] invalid artist type: {param} should be str, is {type(param)}')
         self.artist = artist
-        self._artistmatch = artistmatch
+        self.artistmatch = artistmatch
 
-    def serialize(self) -> str:
-        return str(self)
+    def serialize(self) -> dict:
+        return {'artist': self.artist, 'artistmatch': self.artistmatch}
 
     def __str__(self):
         return f'{self.artist}'
