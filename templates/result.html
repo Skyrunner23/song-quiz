@@ -5,10 +5,30 @@
       <h1 class="text-body-emphasis">Today's song clue</h1>
         <p class="lead">{{ year }}, {{ genre }}</p>
         <p class="lead">"{{ lyric | safe}}"</p>
-      <h2 class="text-body-emphasis">Your guess</h2>
-        <p class="lead"><em>{{ user_title }}</em> by {{ user_artist }}</p>
       <h2 class="text-body-emphasis">Actual answer</h2>
         <p class="lead"><em>{{ title }}</em> by {{ artist }}</p>
+      <h2 class="text-body-emphasis">Your guess</h2>
+        <p class="lead"><em>{{ user_title }} <span id="titlescore" style="font-size: 2em;"></span></em>
+            by {{ user_artist }} <span id="artistscore" style="font-size: 2em;"></span></p>
     </div>
+
+    <script>
+        const userscore = JSON.parse('{{ userscore | tojson | safe}}');
+        function mark(myelement, grade){
+            const correct = "&#x2714;";
+            const incorrect = "&#x2718;";
+            if (grade){
+                myelement.innerHTML = correct;
+                myelement.style.color = "green";
+            } else {
+                myelement.innerHTML = incorrect;
+                myelement.style.color = "red";
+            }
+        }
+        const titleresult = document.getElementById('titlescore');
+        const artistresult = document.getElementById('artistscore');
+        mark(titleresult, userscore.title);
+        mark(artistresult, userscore.artist);
+    </script>
 
 {% endblock %}

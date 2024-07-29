@@ -20,6 +20,8 @@ class MyCSVRepository(PuzzleRepository):
                      "Rock",
                      1987,
                      "Never Gonna Give You Up",
+                     "Never Gonna Give You Up",
+                     "Rick Astley",
                      "Rick Astley")
     DEFAULT = None
 
@@ -42,7 +44,7 @@ class MyCSVRepository(PuzzleRepository):
                   'r', encoding='utf-8') as puzzles:
             csv_reader = csv.reader(puzzles, delimiter=self.DELIMITER)
             next(csv_reader)
-            for date, lyric, genre, year, title, artist in csv_reader:
+            for date, lyric, genre, year, title, titlematch, artist in csv_reader:
                 # Validation:
                 #   artist: in self.get_artist() method, called below
                 #   genre: in Genre() object
@@ -50,10 +52,9 @@ class MyCSVRepository(PuzzleRepository):
                 if not re.fullmatch(self.DATEMATCH, date):
                     raise ValueError(f'MyCSVRepository.get_puzzle_by_date(): malformed date in {self.PUZZLES}: {date}')
                 if date == desired_date:
-                    normalized = str(self._get_artist(artist))
-                    if normalized is not None and artist != normalized:
-                        artist = normalized
-                    puzzle = Puzzle(date, lyric, genre, int(year), title, artist)
+                    datesartist = self._get_artist(artist)
+                    puzzle = Puzzle(date, lyric, genre, int(year), title, titlematch,
+                                    datesartist.artist, datesartist.artistmatch)
                     break
 
         return puzzle
@@ -63,7 +64,9 @@ class MyCSVRepository(PuzzleRepository):
         search the artist table in order to instantiate an Artist object
 
         :param desired_artist:str
-        :return: Artist() object that matches this string, or None
+        :return: Artist() object that matches this string
+
+        If a corresponding Artist() cannot be found, raise ValueError
         """
         # artist = self.DEFAULT.answer.artist
         artist = None
@@ -72,12 +75,14 @@ class MyCSVRepository(PuzzleRepository):
                   'r', encoding='utf-8') as artists:
             csv_reader = csv.reader(artists, delimiter=self.DELIMITER)
             for uid, artistname, pattern in csv_reader:
-                if re.fullmatch(pattern, desired_artist.lower(), re.IGNORECASE):
-                    artist = Artist(artistname)
+                if re.fullmatch(pattern, desired_artist, flags=re.IGNORECASE):
+                    artist = Artist(artistname, pattern)
                     break
 
-        return artist
+        if artist is None:
+            raise ValueError(f'[MyCSVRepository._get_artist] : {artist} requested, not found')
 
+        return artist
 
     def record_submission(self, user_sub: Submission) -> bool:
         """
@@ -88,7 +93,7 @@ class MyCSVRepository(PuzzleRepository):
         """
 
         if not isinstance(user_sub, Submission):
-            raise TypeError(f'[CSV_Repository] record_submission received invalid type: '
+            raise TypeError(f'[MyCSV_Repository] record_submission received invalid type: '
                             f'{user_sub} should be Submission, is {type(user_sub)}')
 
         with open(os.path.normpath(os.path.join(self.ROOT, self.SUBMISSIONS)),
