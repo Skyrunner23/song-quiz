@@ -30,6 +30,8 @@
                 <label for="guessSongTitle" class="col-form-label">Song title</label>
               </div>
               <div class="col">
+                <!-- Hidden input field with a fixed string value -->
+                <input type="hidden" name="guessDate" value="{{ today_date }}">
                 <input type="text" id="guessSongTitle" name="guessSongTitle" class="form-control">
               </div>
             </div>

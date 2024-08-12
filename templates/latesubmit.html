@@ -1,0 +1,11 @@
+{% extends "leadline.html" %}
+{% block content %}
+
+    <div class="p-5 text-center bg-body-tertiary rounded-3">
+      <h1 class="text-body-emphasis">Sorry!</h1>
+        <p class="lead">It looks like you tried to submit an answer for the puzzle from {{guessDate}},
+            but that puzzle has expired. Today's date is {{ puzzleDate }}.</p>
+        <p class="lead"><a href="https://lyriquizz.com">Click here to go back to the main page</a></p>
+    </div>
+
+{% endblock %}
