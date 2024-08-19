@@ -110,25 +110,45 @@ date%lyric%genre%year%title%titlematch%artist
 2024/07/29%Let the stormy clouds chase everyone from the place<br />Come on with the rain, I’ve a smile on my face%Showtunes%1952%Singin’ in the Rain%singin[’'g]? in the rain%Gene Kelly
 2024/07/30%When I look into your eyes<br />I can see a love restrained<br />But darlin’ when I hold you<br />Don’t you know I feel the same?%Hard Rock%1991%November Rain%november rain%Guns N’ Roses
 2024/07/31%Sun is shinin’ in the sky<br />There ain’t a cloud in sight<br />It’s stopped rainin’, everybody’s in the play<br />And don’t you know, it’s a beautiful new day, hey%Pop Rock%1977%Mr. Blue Sky%(mister|mr\.?) blue sky%Electric Light Orchestra
-2024/08/01%Coast to coast, L.A. to Chicago<br \>Western male<br \>Across the north and south to Key Largo<br \>Love for sale%Smooth Jazz%1984%Smooth Operator%smooth operat[oe]r%Sade
-2024/08/02%She’s mighty mighty<br \>Just letting it all hang out%Funk%1977%Brick House%((she[’']s )?a )?brick house%The Commodores
-2024/08/05%I’ve waited hours for this<br \>I’ve made myself so sick<br \>I wish I’d stayed<br \>Asleep today%Alternative%1985%Close to Me%close to (me|you)%The Cure
-2024/08/06%It’s far beyond a star<br \>It’s near beyond the moon<br \>I know beyond a doubt<br \>My heart will lead me there soon%Big Band%1958%Beyond the Sea%(somewhere )?beyond the sea%Bobby Darin
-2024/08/07%You keep sayin’ you got somethin’ for me<br \>Somethin’ you call love, but confess<br \>You’ve been a-messin’ where you shouldn’t have been a-messin’<br \>And now someone else is gettin’ all your best%Pop Country%1966%These Boots are Made for Walkin’%(these|my) boots (are|were) made for walkin[’'g]?%Nancy Sinatra
-2024/08/08%When I need motivation<br \>My one solution is my queen<br \>’Cause she stays strong%Pop%2014%Cheerleader%cheer ?leader%OMI
-2024/08/09%Music is a world within itself<br \>With a language we all understand<br \>With an equal opportunity<br \>For all to sing, dance, and clap their hands%R&B/Soul%1976%Sir Duke%sir duke%Stevie Wonder
-2024/08/12%You know the night’s magic seems to whisper and hush<br \>You know the soft moonlight seems to shine in your blush%Jazz%1970%Moondance%moon ?dance%Van Morrison
-2024/08/13%The time has come<br \>To say fair’s fair<br \>To pay the rent<br \>To pay our share%Rock%1987%Beds are Burning%beds are burning%Midnight Oil
-2024/08/14%I want the world to know<br \>I got to let it show%Disco%1980%I’m Coming Out%i[’']m coming out%Diana Ross
-2024/08/15%I get knocked down<br \>But I get up again<br \>You’re never gonna keep me down%Rock%1997%Tubthumping%tub ?thumping%Chumbawamba
-2024/08/16%Stolen from Africa<br \>Brought to America<br \>Fighting on arrival<br \>Fighting for survival%Reggae%1983%Buffalo Soldier%buffalo soldier%Bob Marley & the Wailers
-2024/08/19%Groovy, groovy, jazzy, funky<br \>Pounce, bounce, dance as we<br \>Dip in the melodic sea<br \>The rhythm keeps flown’, it drips the MC%Jazz Rap%1993%Cataloop (Flip Fantasia)%cataloop( \(flip fantasia\))?%Us3
-2024/08/20%With a hundred and ten cornets right behind<br \>There were over a thousand reeds<br \>Springing up like weeds<br \>There were horns of every shape and kind%Showtunes%1957%Seventy-Six Trombones%(seventy-six|76) trombones%The Music Man
-2024/08/21%I’ve never had to knock on wood<br \>But I know someone who has<br \>Which makes me wonder if I could%Ska%1997%The Impression that I Get%the impression that i get%Mighty Mighty Bosstones
-2024/08/22%The way that you talk, you speaking my language<br \>The way that you walk, you can’t contain it<br \>Is it the shoes? Jumped up, kangaroo!<br \>We’re overdue for a little more prancing%R&B/Soul%2021%FREEDOM%freedom%Jon Batiste
-2024/08/23%When I’m alone with my fancies<br \>I’ll be with you<br \>Weaving romances<br \>Making believe they’re true%Jazz%1951%A Kiss to Build a Dream on%a kiss to build a dream on%Louis Armstrong
-2024/08/26%Huggin’ and squeezin’ and kissin’ and pleasin’<br \>Together forever through rain or whatever%Soul%1975%This Will Be (An Everlasting Love)%this will be( \(an everlasting love\))?%Natalie Cole
-2024/08/27%I love you baby, and if it’s quite alright<br \>I need you baby, to warm a lonely night<br \>I love you baby, trust in me when I say%Pop Rock%1967%Can’t Take My Eyes off of You%can[’']t take my eyes off( of)? you%Frankie Vallie
-2024/08/28%Everybody gather ‘round now<br \>Let your body feel the beat<br \>Don’t you worry if you can’t dance<br \>Let the music move your feet%Latin Pop%1985%Conga%conga%Gloria Estefan and Miami Sound Machine
-2024/08/29%Stronger than any mountain cathedral<br \>Truer than any tree ever grew<br \>Deeper than any forest primeval<br \>I am in love with you%Folk%1979%Longer%longer%Dan Fogelberg
-2024/08/30%Oh, if she called me, I’d be there<br \>I’d come running anywhere<br \>She’s all I need, all my life<br \>I feel so good if I just say the word%Pop%1985%Sussudio%sussudio%Phil Collins
+2024/08/01%Coast to coast, L.A. to Chicago<br />Western male<br />Across the north and south to Key Largo<br />Love for sale%Smooth Jazz%1984%Smooth Operator%smooth operat[oe]r%Sade
+2024/08/02%She’s mighty mighty<br />Just letting it all hang out%Funk%1977%Brick House%((she[’']s )?a )?brick house%The Commodores
+2024/08/05%I’ve waited hours for this<br />I’ve made myself so sick<br />I wish I’d stayed<br />Asleep today%Alternative%1985%Close to Me%close to (me|you)%The Cure
+2024/08/06%It’s far beyond a star<br />It’s near beyond the moon<br />I know beyond a doubt<br />My heart will lead me there soon%Big Band%1958%Beyond the Sea%(somewhere )?beyond the sea%Bobby Darin
+2024/08/07%You keep sayin’ you got somethin’ for me<br />Somethin’ you call love, but confess<br />You’ve been a-messin’ where you shouldn’t have been a-messin’<br />And now someone else is gettin’ all your best%Pop Country%1966%These Boots are Made for Walkin’%(these|my) boots (are|were) made for walkin[’'g]?%Nancy Sinatra
+2024/08/08%When I need motivation<br />My one solution is my queen<br />’Cause she stays strong%Pop%2014%Cheerleader%cheer ?leader%OMI
+2024/08/09%Music is a world within itself<br />With a language we all understand<br />With an equal opportunity<br />For all to sing, dance, and clap their hands%R&B/Soul%1976%Sir Duke%sir duke%Stevie Wonder
+2024/08/12%You know the night’s magic seems to whisper and hush<br />You know the soft moonlight seems to shine in your blush%Jazz%1970%Moondance%moon ?dance%Van Morrison
+2024/08/13%The time has come<br />To say fair’s fair<br />To pay the rent<br />To pay our share%Rock%1987%Beds are Burning%beds are burning%Midnight Oil
+2024/08/14%I want the world to know<br />I got to let it show%Disco%1980%I’m Coming Out%i[’']m coming out%Diana Ross
+2024/08/15%I get knocked down<br />But I get up again<br />You’re never gonna keep me down%Rock%1997%Tubthumping%tub ?thumping%Chumbawamba
+2024/08/16%Stolen from Africa<br />Brought to America<br />Fighting on arrival<br />Fighting for survival%Reggae%1983%Buffalo Soldier%buffalo soldier%Bob Marley & the Wailers
+2024/08/19%Groovy, groovy, jazzy, funky<br />Pounce, bounce, dance as we<br />Dip in the melodic sea<br />The rhythm keeps flown’, it drips the MC%Jazz Rap%1993%Cataloop (Flip Fantasia)%cataloop( \(flip fantasia\))?%Us3
+2024/08/20%With a hundred and ten cornets right behind<br />There were over a thousand reeds<br />Springing up like weeds<br />There were horns of every shape and kind%Showtunes%1957%Seventy-Six Trombones%(seventy-six|76) trombones%The Music Man
+2024/08/21%I’ve never had to knock on wood<br />But I know someone who has<br />Which makes me wonder if I could%Ska%1997%The Impression that I Get%the impression that i get%Mighty Mighty Bosstones
+2024/08/22%The way that you talk, you speaking my language<br />The way that you walk, you can’t contain it<br />Is it the shoes? Jumped up, kangaroo!<br />We’re overdue for a little more prancing%R&B/Soul%2021%FREEDOM%freedom%Jon Batiste
+2024/08/23%When I’m alone with my fancies<br />I’ll be with you<br />Weaving romances<br />Making believe they’re true%Jazz%1951%A Kiss to Build a Dream on%a kiss to build a dream on%Louis Armstrong
+2024/08/26%Huggin’ and squeezin’ and kissin’ and pleasin’<br />Together forever through rain or whatever%Soul%1975%This Will Be (An Everlasting Love)%this will be( \(an everlasting love\))?%Natalie Cole
+2024/08/27%I love you baby, and if it’s quite alright<br />I need you baby, to warm a lonely night<br />I love you baby, trust in me when I say%Pop Rock%1967%Can’t Take My Eyes off of You%can[’']?t take my eyes off( of)? you%Frankie Vallie
+2024/08/28%Everybody gather ’round now<br />Let your body feel the beat<br />Don’t you worry if you can’t dance<br />Let the music move your feet%Latin Pop%1985%Conga%conga%Gloria Estefan and Miami Sound Machine
+2024/08/29%Stronger than any mountain cathedral<br />Truer than any tree ever grew<br />Deeper than any forest primeval<br />I am in love with you%Folk%1979%Longer%longer%Dan Fogelberg
+2024/08/30%Oh, if she called me, I’d be there<br />I’d come running anywhere<br />She’s all I need, all my life<br />I feel so good if I just say the word%Pop%1985%Sussudio%sussudio%Phil Collins
+2024/09/03%In the middle of the night<br />I go walking in my sleep<br />From the mountains of faith<br />To the river so deep%Pop/Rock%1993%The River of Dreams%river of dreams%Billy Joel
+2024/09/04%Oh, I could hide ‘neath the wings<br />Of the bluebird as she sings<br />The six o’clock alarm would never ring%Folk Rock%1967%Daydream Believer%daydream believer%The Monkees
+2024/09/05%You think I’m pretty without any makeup on<br />You think I’m funny when I tell the punchline wrong%Pop%2010%Teenage Dream%teenage dream%Katy Perry
+2024/09/06%And now I tell you openly<br />You have my heart so don’t hurt me<br />You’re what I couldn’t find%Alternative%1993%Dreams%dreams%The Cranberries
+2024/09/09%I’ll be the sun shining on you<br />Hey Cinderella, step in your shoe<br />I’ll be your non-stop lover, get in while you can<br />Your non-stop miracle, I’m your man%Pop Rock%1988%Get Outta My Dreams, Get Into My Car%get (outta|out of) my dreams, get in ?to my car%Billy Ocean
+2024/09/10%I walk a lonely road<br />The only road that I have ever known%Alt Rock%2004%Boulevard of Broken Dreams%boulevard of broken dreams%Green Day
+2024/09/11%Some of them want to use you<br />Some of them want to get used by you%Synth Pop%1983%Sweet Dreams (Are Made of This)%sweet dreams( are made of this)?%The Eurythmics
+2024/09/12%So here it is, another chance<br />Wide awake you face the day<br />Your dream is over<br />Or has it just begun?%Progressive Metal%1990%Silent Lucidity%silent lucidity%Queensryche
+2024/09/13%Fly me high through the starry skies<br />Maybe to an astral plane<br />Cross the highways of fantasy<br />Help me to forget today’s pain%New Age%1975%Dream Weaver%dream ?weaver%Gary Wright
+2024/09/16%I can make you mine, taste your lips of wine<br />Any time, night or day<br />Only trouble is, gee whiz<br />I’m dreamin’ my life away%Pop%1958%All I Have to Do is Dream%all i have to do is dream%The Everly Brothers
+2024/09/17%I never dreamed I’d love somebody like you<br />I never dreamed that I’d lose somebody like you%Rock%1989%Wicked Game%wicked game%Chris Isaak
+2024/09/18%We climb and at the top we fly<br />Let the world go on below us<br />We are lost in time%Rock%1987%In My Dreams%in my dreams%REO Speedwagon
+2024/09/19%There is freedom within<br />There is freedom without<br />Try to catch the deluge in a paper cup%Rock%1986%Don’t Dream it’s Over%don[’']?t dream it[’']?s over%Crowded House
+2024/09/20%Wake up, kids, we’ve got the dreamers’ disease<br />Age fourteen, they got you down on your knees<br />So polite, we’re busy still saying please%Alt Rock%1998%You Get What You Give%you get what you give%New Radicals
+2024/09/23%Once upon a time<br />Once when you were mine<br />I remember skies<br />Reflected in your eyes%Rock%1986%Your Wildest Dreams%your wildest dreams%The Moody Blues
+2024/09/24%Lately, I’ve been, I’ve been losing sleep<br />Dreamin’ about the things that we could be%Rock%2013%Counting Stars%counting stars%OneRepublic
+2024/09/25%What I want, you got and it might be hard to handle<br />But like a flame burns the candle<br />The candle feeds the flame%Pop Rock%1980%You Make My Dreams Come True%you make my dreams come true%Hall & Oates
+2024/09/26%Every night I lie in bed<br />The brighest colors fill my head%Showtunes%2017%A Million Dreams%a million dreams%The Greatest Showman
+2024/09/27%Every time I’m telling secrets<br />I remember how it used to be<br />And I realized how much I miss you<br />And I realize how it feels to be free%Pop%1987%Only in my Dreams%only in my dreams%Debbie Gibson
+2024/09/30%The lovers, the dreamers, and me%Showtunes%1979%Rainbow Connection%rainbow connection%The Muppet Movie
