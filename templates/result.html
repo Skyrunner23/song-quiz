@@ -7,10 +7,10 @@
         <p class="lead">"{{ lyric | safe}}"</p>
       <h2 class="text-body-emphasis">Actual answer</h2>
         <p class="lead">
-            <button title="Click to reveal" type="button" onclick="if(document.getElementById('spoiler_title') .style.display=='none') {document.getElementById('spoiler_title') .style.display=''}else{document.getElementById('spoiler_title') .style.display='none'}">Click to reveal</button>
+            <button title="Click to reveal" type="button" onclick="if(document.getElementById('spoiler_title') .style.display=='none') {document.getElementById('spoiler_title') .style.display=''}else{document.getElementById('spoiler_title') .style.display='none'}">⟨⟨⟨⟨ Click to slide ⟩⟩⟩⟩</button>
                 <span id="spoiler_title" style="display:none"><em>{{ title }}</em></span> by
                 <span id="spoiler_artist" style="display:none">{{ artist }}</span>
-            <button title="Click to reveal" type="button" onclick="if(document.getElementById('spoiler_artist') .style.display=='none') {document.getElementById('spoiler_artist') .style.display=''}else{document.getElementById('spoiler_artist') .style.display='none'}">Click to reveal</button></p>
+            <button title="Click to reveal" type="button" onclick="if(document.getElementById('spoiler_artist') .style.display=='none') {document.getElementById('spoiler_artist') .style.display=''}else{document.getElementById('spoiler_artist') .style.display='none'}">⟨⟨⟨⟨ Click to slide ⟩⟩⟩⟩</button></p>
       <h2 class="text-body-emphasis">Your guess</h2>
         <p class="lead"><em>{{ user_title }} <span id="titlescore" style="font-size: 2em;"></span></em>
             by {{ user_artist }} <span id="artistscore" style="font-size: 2em;"></span></p>
