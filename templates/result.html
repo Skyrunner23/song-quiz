@@ -16,7 +16,7 @@
             by {{ user_artist }} <span id="artistscore" style="font-size: 2em;"></span></p>
     </div>
 
-    <script>
+    <script type="text/gzip">
         const userscore = JSON.parse('{{ userscore | tojson | safe}}');
         function mark(myelement, grade){
             const correct = "&#x2714;";
