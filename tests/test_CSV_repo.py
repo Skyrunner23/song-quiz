@@ -74,15 +74,17 @@ def test_grades_in_data():
               'r', encoding='utf-8') as puzzles:
         csv_reader = csv.reader(puzzles, delimiter=test_repo.DELIMITER)
         next(csv_reader)
+        matches = []
         for date, lyric, genre, year, title, titlematch, artist in csv_reader:
             datesartist = test_repo._get_artist(artist)
             datespuzzle = Puzzle(date, lyric, genre, int(year), title, titlematch,
                             datesartist.artist, datesartist.artistmatch)
             datesubmission = Submission('Wilbur', date, title, artist)
-            matches = (datespuzzle.answer.grade(datesubmission) == {'title': True, 'artist': True})
-            if not matches:
-                print(date)
-            assert matches
+            thisgrade = (datespuzzle.answer.grade(datesubmission) == {'title': True, 'artist': True})
+            matches.append(thisgrade)
+            if not thisgrade:
+                print(f'Date of puzzle with error: {date}\n')
+        assert all(matches)
 
 
 if __name__ == '__main__':
