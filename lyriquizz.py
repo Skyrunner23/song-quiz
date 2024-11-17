@@ -173,7 +173,7 @@ def demo():
     past = services.get_yesterday()
     if not clue:
         return nottoday(now, past)
-    return render_template('quiz.html',
+    return render_template('demoquiz.html',
                            fancydate=now.strftime("%B %-d, %Y"),
                            today_date=now.strftime("%Y/%m/%d"),
                            renderdatetime=now.strftime("%c"),
