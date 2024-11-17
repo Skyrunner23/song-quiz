@@ -42,7 +42,9 @@ def sanitize_input(incoming: str) -> str:
 #  /api/yesterday, will provide all of yesterday's (or the most recent day's) puzzle as a JSON (GET)
 #  /api/submit, will handle submissions not from the web form
 #  /, will provide a web form with today's clue and yesterday's full puzzle (GET)
+#  /demo, will provide a demo clue regardless of whether the actual date has a clue (GET)
 #  /result, handles submission/grading from web form (POST)
+#  /demoresult, shows grading for the demo submission (POST)
 #
 # Eventually, we'll want to
 #  (0) receive guesses, add to a database? (current G Forms functionality)
@@ -162,6 +164,52 @@ def nottoday(now, past):
                            past_lyric=past.clue.lyric,
                            past_song=past.answer.title,
                            past_artist=past.answer.artist)
+
+
+@app.route("/demo", methods=['GET'])
+def demo():
+    now = datetime.now(tz=services.LOCALTZ)
+    clue = services.get_demo(justclue=True)
+    past = services.get_yesterday()
+    if not clue:
+        return nottoday(now, past)
+    return render_template('quiz.html',
+                           fancydate=now.strftime("%B %-d, %Y"),
+                           today_date=now.strftime("%Y/%m/%d"),
+                           renderdatetime=now.strftime("%c"),
+                           year=clue.year, genre=clue.genre, lyric=clue.lyric,
+                           past_date=past.date,
+                           past_year=past.clue.year,
+                           past_genre=past.clue.genre,
+                           past_lyric=past.clue.lyric,
+                           past_song=past.answer.title,
+                           past_artist=past.answer.artist)
+
+
+@app.route("/demoresult", methods=['POST'])
+def scoredemo():
+    now = datetime.now(tz=services.LOCALTZ)
+    puzzle = services.get_demo(justclue=False)
+
+    #  Store user's submission
+    guessUserName = sanitize_input(request.form.get('guessUserName'))
+    guessSongTitle = sanitize_input(request.form.get('guessSongTitle'))
+    guessArtist = sanitize_input(request.form.get('guessArtist'))
+
+    userSub = Submission(guessUserName, puzzle.date, guessSongTitle, guessArtist)
+    userscore = puzzle.answer.grade(userSub)
+
+    return render_template('demoresult.html',
+                           fancydate=now.strftime("%B %-d, %Y"),
+                           renderdatetime=now.strftime("%c"),
+                           year=puzzle.clue.year,
+                           genre=puzzle.clue.genre,
+                           lyric=puzzle.clue.lyric,
+                           title=puzzle.answer.title,
+                           artist=puzzle.answer.artist,
+                           user_title=guessSongTitle,
+                           user_artist=guessArtist,
+                           userscore=userscore)
 
 
 if __name__ == "__main__":

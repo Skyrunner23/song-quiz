@@ -43,6 +43,17 @@ class Services:
                 return yesterdayspuzzle
         return self.repo.DEFAULT
 
+    def get_demo(self, justclue=True) -> Union[Clue, Puzzle, None]:
+        """return the clue for a demo puzzle"""
+        puzzledate = "2000/01/01"
+        demopuzzle = self.repo.get_puzzle_by_date(puzzledate)
+        if demopuzzle and justclue:
+            return demopuzzle.clue
+        elif demopuzzle:
+            return demopuzzle
+        else:
+            return None
+
     def record_submission(self, user_sub: Submission) -> bool:
         """
         take in a user's submission for a puzzle and store it for grading
