@@ -27,13 +27,15 @@ dictConfig({
 
 
 def sanitize_input(incoming: str) -> str:
-    """keep only ascii text and limited punctuation, whitespace to one"""
+    """turn blank fields to BLANK, keep only ascii text and limited punctuation, whitespace to one"""
+    BLANK = "(blank)"
     allowed = re.compile(r"[^,.?!`'’;:@#$&<>()/~\w =-]", flags=re.IGNORECASE)
-    incoming = unidecode(incoming)                        # accented chars to base char
-    incoming = re.sub(allowed, '', incoming)         # keep only the allowed chars
-    incoming = re.sub(r'\s+', ' ', incoming)  # shorten multiple spaces to one
-    incoming = incoming.strip()                           # strip leading/trailing whitespace
-    return incoming
+    toprocess = incoming or BLANK
+    toprocess = unidecode(toprocess)                        # accented chars to base char
+    toprocess = re.sub(allowed, '', toprocess)         # keep only the allowed chars
+    toprocess = re.sub(r'\s+', ' ', toprocess)  # shorten multiple spaces to one
+    toprocess = toprocess.strip()                           # strip leading/trailing whitespace
+    return toprocess
 
 # Endpoints:
 #  /api/today, will provide just the clue for today's puzzle as a JSON (GET)

@@ -22,8 +22,12 @@
                 <label for="guessUserName" class="col-form-label">Your name</label>
               </div>
               <div class="col">
-                <input type="text" id="guessUserName" name="guessUserName" class="form-control">
+                <input type="text" id="guessUserName" name="guessUserName" class="form-control" required>
               </div>
+              <div class="invalid-feedback">
+                Don't forget to enter your name!
+              </div>
+            </div>
             </div>
             <div class="row">
               <div class="col">
@@ -44,7 +48,6 @@
               </div>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
-          </div>
           <div class="col"></div>
         </div>
       </form>
