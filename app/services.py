@@ -34,7 +34,7 @@ class Services:
         return information for yesterday's puzzle, or if there is no puzzle
           for yesterday, then return the most recent puzzle before today
         """
-        range_to_consider = 7  # only check for the most recent 7 days
+        range_to_consider = 15  # only check for the most recent 15 days
         for delta in range(0, range_to_consider):
             yesterday = datetime.now(tz=self.LOCALTZ) - timedelta(days=(1+delta))
             yesterdaysdate = yesterday.strftime(self.repo.DATEFORMAT)
