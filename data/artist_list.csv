@@ -26,210 +26,212 @@ ID%artist%artistmatch
 25%Bob Marley & the Wailers%bob marley( (&|and) the wailers)?
 26%Bobby Darin%bobb(y|ie) darr?(i|e)n
 27%Bonnie Raitt%bonnie raitt?
-28%Boston%boston
-29%Boy Meets Girl%boy meets girl
-30%Boyz II Men%boy[sz] (II|2) men
-31%Bruce Hornsby and the Range%bruce hornsby( (and|&) the range)?
-32%Bruce Springsteen%bruce springsteen
-33%Cage the Elephant%cage the elephant
-34%Camila Cabello%camill?a cabello
-35%Carl Carlton%carl carlton
-36%Celine Dion%celine dion
-37%Chamillionaire ft. Krayzie Bone%chamillionaire( (ft.|featuring) Krayzie Bone)?
-38%Chris Isaak%ch?ris isaa?(k|c)
-39%Chubby Checker%chubb(y|ie) checker
-40%Chuck Berry%chuck berry
-41%Chumbawamba%chumbaw(a|u)mba
-42%Coolio ft. L.V.%coolio( (ft.|featuring) L.?V.?)?
-43%Creedence Clearwater Revival%(the )?creedence clearwater revival
-44%Creepy John Thomas%(creepy )?john thomas
-45%Crowded House%crowded house
-46%Cyndi Lauper%cyndi lauper
-47%Dan Fogelberg%dan fogelb(e|u)rg
-48%Dashboard Confessional%dashboard confessional
-49%Dean Martin%dean martin
-50%Dean Martin and Burt Bacharach%dean martin (and|\&) burt bacharach
-51%Debbie Gibson%debb(ie|y) gibs(o|e)n
-52%Dee-Lite%dee?-?lite
-53%Demi Lovato%demi lovato
-54%Diana Ross%diann?a ross
-55%Dionne Warwick%dionne warwick
-56%Don McLean%don ma?clean
-57%Drake%drake
-58%Dua Lipa%dua lipa
-59%Dusty Springfield%dusty springfield
-60%Earth, Wind & Fire%earth,? Wind,? (&|and) fire
-61%Ed Sheeran and Elton John%ed sheeran and elton john
-62%Eddie Rabbitt%eddie rabbitt?
-63%Electric Light Orchestra%(the )?electric light orchestra
-64%Elmo & Patsy%elmo (and|&) patsy
-65%Elton John%elton john
-66%Eminem%eminem
-67%Encanto%encanto
-68%Enya%enya
-69%Fleet Foxes%fleet foxes
-70%Fleetwood Mac%fleetwood mac
-71%Frankie Vallie%frankie vall(ie|ey)
-72%Gary Wright%gary w?right
-73%Gayla Peevey%gayla peevey
-74%Gene Kelly%gene kelly
-75%George Ezra%george ezra
-76%Gin Blossoms%gin blossoms
-77%Gloria Estefan and Miami Sound Machine%gloria estefan( (&|and)( the)? miami sound machine)?
-78%Gloria Gaynor%gloria gaynor
-79%Grand Funk Railroad%grand funk railroad
-80%Green Day%green day
-81%Guns N’ Roses%guns (&|n’?|and) roses
-82%Gwen Stefani%gwen stefani
-83%Gwen Stefani ft. Blake Shelton%gwen stefani( (ft.|featuring|and) blake shelton)?
-84%Hall & Oates%hall (&|n’?|and) oate?s
-85%Harry Styles%harry styles
-86%Heart%heart
-87%Huey Lewis and The News%huey lewis (&|n’?|and) the news
-88%Idina Menzel from Wicked%idina menzel( from wicked)?
-89%Iggy Azalea ft. Charli XCX%iggy azalea( (ft.|featuring) charlie? xcx)?
-90%Imagine Dragons%imagine dragons
-91%James Taylor%james taylor
-92%Jan & Dean%jan (and|&) dean
-93%Janet Jackson%janet jackson
-94%Jay-Z ft. Alicia Keys%jay-z( (ft.|featuring) alicia keys)?
-95%Jefferson Airplane%jefferson airplane
-96%Jimmy Buffett%jimmy buffett
-97%Joan Jett & the Blackhearts%joan jett?( (&|and) the blackhearts)?
-98%John Lennon%john lennon
-99%John Lennon and Yoko Ono%john lennon and yoko ono
-100%Johnny Cash%johnny cash
-101%Johnny Horton%johnny horton
-102%Johnny Nash%johnny nash
-103%Jon Batiste%jo(h)?n bap?tiste
-104%Journey%journey
-105%Justin Bieber%justin bieber
-106%Kacey Musgraves%kacey musgraves
-107%Katy Perry%kat(y|ie) perr?y
-108%Kelly Clarkson%kelly clarkson
-109%Kesha%kesha
-110%Lady Gaga%lady gaga
-111%Lady Gaga and Beyoncé%lady gaga and beyonc[eé]
-112%Led Zeppelin%led zeppelin
-113%Leona Lewis%leona lewis
-114%Linda Rondstadt%linda rondstadt
-115%Lorde%lorde?
-116%Los Bravos%los bravos
-117%Louis Armstrong%(louis|louie) armstrong
-118%Lynyrd Skynyrd%lynyrd skynyrd
-119%M.I.A.%m\.i\.a\.
-120%Madonna%madonna
-121%Marc Cohn%marc cohn
-122%Mariah Carey%mariah carey
-123%Maroon 5%maroon (5|five)
-124%Mary Chapin Carpenter%mary chapin carpenter
-125%MC Hammer%mc hammer
-126%Men at Work%men at work
-127%Metallica%metallica
-128%Michael Jackson%michael jackson
-129%Midnight Oil%midnight oil
-130%Mighty Mighty Bosstones%mighty mighty bosstones
-131%Miley Cyrus%miley cyrus
-132%Milli Vanilli%milli vanilli
-133%My Chemical Romance%my chemical romance
-134%Nancy Sinatra%nance?y sinatra
-135%Natalie Cole%natalie cole
-136%Neil Young%neil young
-137%New Kids on the Block%(the )?new kids on the block
-138%New Radicals%(the )?new radicals
-139%Nirvana%nirvana
-140%Noah Kahan%noah kahan
-141%Olivia Rodriguo%olivia rodriguo
-142%OMI%omi
-143%One Direction%one direction
-144%OneRepublic%one ?republic
-145%Ozzy Ozbourne%ozzy ozbou?rne?
-146%Pat Benetar%pat benetar
-147%Paula Abdul%paula abdul
-148%Pearl Jam%pearl ?jam
-149%Peter Gabriel%peter gabriel
-150%Peter, Paul & Mary%peter, paul \& mary
-151%Pharrell Williams%pharrell williams
-152%Phil Collins%phil coll?ins
-153%Pink%pink
-154%Pink Floyd%pink floyd
-155%Portishead%portishead
-156%Prince%prince
-157%Queen%queen
-158%Queensryche%queensr(y|ei)che?
-159%Ram Jam%ram ?jam
-160%Ray Charles%ray charles
-161%REO Speedwagon%reo speedwagon
-162%Richard Harris%richard harris
-163%Rick Astley%ric?k astle?y
-164%Rosé and Bruno Mars%ros[eé] (and|&|n) bruno mars
-165%Rose Royce%rose royce
-166%Run DMC%run dmc
-167%Sade%sade( abo?u)?
-168%Salt-n-Pepa%salt-n-pepa
-169%Santana%(carlos )?santana
-170%Sheryl Crow%[sc]heryl crow
-171%Sia%sia
-172%Simon & Garfunkel%simon (&|and) garfunkel
-173%Snow Patrol%snow patrol
-174%Soundgarden%sound ?garden
-175%Stan Goetz, João Gilberto, Astrud Gilberto%stan go?etz, jo[ãa]o gilberto, astrud gilberto
-176%Stevie Wonder%stevie wonder
-177%Suzanne Vega%suzanne vega
-178%Taio Cruz and Ludacris%taio cruz and ludacris
-179%Taylor Dayne%taylor dayne
-180%Taylor Swift%taylor swift
-181%The Animals%(the )?animals
-182%The Backstreet Boys%(the )?backstreet boy[sz]
-183%The Bangles%(the )?bangles
-184%The Beatles%(the )?beatles
-185%The BeeGees%(the )?bee( |-)?gees
-186%The Black Crowes%(the )?black crowe?s
-187%The Black Eyed Peas%(the )?black[- ]eyed peas
-188%The Black Keys%(the )?black keys
-189%The Box Tops%(the )?box tops
-190%The Cars%(the )?cars
-191%The Chi-Lites%(the )?chi-lites
-192%The Chordettes%(the )?ch?ordette?s
-193%The Clash%(the )?clash
-194%The Commodores%(the )?comm?odore?s
-195%The Cranberries%(the )?cranberr?ies
-196%The Cure%(the )?cure
-197%The Darkness%(the )?darkness
-198%The Doobie Brothers%(the )?doobie brothers
-199%The Eagles%(the )?eagles
-200%the Eurythmics%(the )?eurythmics
-201%The Everly Brothers%(the )?everl(y|ie) brothers
-202%The Go-Go’s%(the )?go-?go[’']?s
-203%The Greatest Showman%(the )?greatest showman
-204%The Hollies%(the )?hollies
-205%The Killers%(the )?killers
-206%The Knack%(the )?knack
-207%The Lovin’ Spoonful%(the )?lovin[’'g]? spoonful
-208%The Monkees%(the )?monk(ie|ee|ey)[sz]
-209%The Moody Blues%(the )?moody blues
-210%The Muppet Movie%((the )?muppet movie)|(kermit( the frog)?)
-211%The Music Man%(the )?music man
-212%The Police%(the )?police
-213%The Red Hot Chili Peppers%(the )?red hot chill?i peppers
-214%The Rolling Stones%(the )?rolling stones
-215%The Smiths%(the )?smiths
-216%The Spice Girls%(the )?spice ?girls
-217%The Temptations%(the )?temptations
-218%The Weeknd%the week(e)?nd
-219%They Might Be Giants%they might be giants
-220%Tina Turner%tina turner
-221%Tom Petty%tom petty
-222%Tony Bennett%tony bennett
-223%Toni Braxton%toni braxton
-224%TOTO%toto
-225%Tracy Chapman%tracy chapman
-226%Train%train
-227%U2%u2
-228%Us3%us ?(3|three)
-229%Usher%usher
-230%Van Morrison%van morr?ison
-231%Weird Al%weird al
-232%Whitney Houston%whitney houston
-233%Will Smith%will smith
-234%Yes%yes
+28%Bonnie Tyler%bonnie tyler
+29%Boston%boston
+30%Boy Meets Girl%boy meets girl
+31%Boyz II Men%boy[sz] (II|2) men
+32%Bruce Hornsby and the Range%bruce hornsby( (and|&) the range)?
+33%Bruce Springsteen%bruce springsteen
+34%Cage the Elephant%cage the elephant
+35%Camila Cabello%camill?a cabello
+36%Carl Carlton%carl carlton
+37%Celine Dion%celine dion
+38%Chamillionaire ft. Krayzie Bone%chamillionaire( (ft.|featuring) Krayzie Bone)?
+39%Chris Isaak%ch?ris isaa?(k|c)
+40%Chubby Checker%chubb(y|ie) checker
+41%Chuck Berry%chuck berry
+42%Chumbawamba%chumbaw(a|u)mba
+43%Coolio ft. L.V.%coolio( (ft.|featuring) L.?V.?)?
+44%Creedence Clearwater Revival%(the )?creedence clearwater revival
+45%Creepy John Thomas%(creepy )?john thomas
+46%Crowded House%crowded house
+47%Cyndi Lauper%cyndi lauper
+48%Dan Fogelberg%dan fogelb(e|u)rg
+49%Dashboard Confessional%dashboard confessional
+50%Dean Martin%dean martin
+51%Dean Martin and Burt Bacharach%dean martin (and|\&) burt bacharach
+52%Debbie Gibson%debb(ie|y) gibs(o|e)n
+53%Dee-Lite%dee?-?lite
+54%Demi Lovato%demi lovato
+55%Diana Ross%diann?a ross
+56%Dionne Warwick%dionne warwick
+57%Don McLean%don ma?clean
+58%Drake%drake
+59%Dua Lipa%dua lipa
+60%Dusty Springfield%dusty springfield
+61%Earth, Wind & Fire%earth,? Wind,? (&|and) fire
+62%Ed Sheeran and Elton John%ed sheeran and elton john
+63%Eddie Rabbitt%eddie rabbitt?
+64%Electric Light Orchestra%(the )?electric light orchestra
+65%Elmo & Patsy%elmo (and|&) patsy
+66%Elton John%elton john
+67%Eminem%eminem
+68%Encanto%encanto
+69%Enya%enya
+70%Fleet Foxes%fleet foxes
+71%Fleetwood Mac%fleetwood mac
+72%Frankie Vallie%frankie vall(ie|ey)
+73%Gary Wright%gary w?right
+74%Gayla Peevey%gayla peevey
+75%Gene Kelly%gene kelly
+76%George Ezra%george ezra
+77%Gin Blossoms%gin blossoms
+78%Gloria Estefan and Miami Sound Machine%gloria estefan( (&|and)( the)? miami sound machine)?
+79%Gloria Gaynor%gloria gaynor
+80%Grand Funk Railroad%grand funk railroad
+81%Green Day%green day
+82%Guns N’ Roses%guns (&|n’?|and) roses
+83%Gwen Stefani%gwen stefani
+84%Gwen Stefani ft. Blake Shelton%gwen stefani( (ft\.|featuring|and) blake shelton)?
+85%Gym Class Heroes ft. Adam Levine%gym class heroes( (ft\.|featuring|and) adam levine)?
+86%Hall & Oates%hall (&|n’?|and) oate?s
+87%Harry Styles%harry styles
+88%Heart%heart
+89%Huey Lewis and The News%huey lewis (&|n’?|and) the news
+90%Idina Menzel from Wicked%idina menzel( from wicked)?
+91%Iggy Azalea ft. Charli XCX%iggy azalea( (ft.|featuring) charlie? xcx)?
+92%Imagine Dragons%imagine dragons
+93%James Taylor%james taylor
+94%Jan & Dean%jan (and|&) dean
+95%Janet Jackson%janet jackson
+96%Jay-Z ft. Alicia Keys%jay-z( (ft.|featuring) alicia keys)?
+97%Jefferson Airplane%jefferson airplane
+98%Jimmy Buffett%jimmy buffett
+99%Joan Jett & the Blackhearts%joan jett?( (&|and) the blackhearts)?
+100%John Lennon%john lennon
+101%John Lennon and Yoko Ono%john lennon and yoko ono
+102%Johnny Cash%johnny cash
+103%Johnny Horton%johnny horton
+104%Johnny Nash%johnny nash
+105%Jon Batiste%jo(h)?n bap?tiste
+106%Journey%journey
+107%Justin Bieber%justin bieber
+108%Kacey Musgraves%kacey musgraves
+109%Katy Perry%kat(y|ie) perr?y
+110%Kelly Clarkson%kelly clarkson
+111%Kesha%kesha
+112%Lady Gaga%lady gaga
+113%Lady Gaga and Beyoncé%lady gaga and beyonc[eé]
+114%Led Zeppelin%led zeppelin
+115%Leona Lewis%leona lewis
+116%Linda Rondstadt%linda rondstadt
+117%Lorde%lorde?
+118%Los Bravos%los bravos
+119%Louis Armstrong%(louis|louie) armstrong
+120%Lynyrd Skynyrd%lynyrd skynyrd
+121%M.I.A.%m\.i\.a\.
+122%Madonna%madonna
+123%Marc Cohn%marc cohn
+124%Mariah Carey%mariah carey
+125%Maroon 5%maroon (5|five)
+126%Mary Chapin Carpenter%mary chapin carpenter
+127%MC Hammer%mc hammer
+128%Men at Work%men at work
+129%Metallica%metallica
+130%Michael Jackson%michael jackson
+131%Midnight Oil%midnight oil
+132%Mighty Mighty Bosstones%mighty mighty bosstones
+133%Miley Cyrus%miley cyrus
+134%Milli Vanilli%milli vanilli
+135%My Chemical Romance%my chemical romance
+136%Nancy Sinatra%nance?y sinatra
+137%Natalie Cole%natalie cole
+138%Neil Young%neil young
+139%New Kids on the Block%(the )?new kids on the block
+140%New Radicals%(the )?new radicals
+141%Nirvana%nirvana
+142%Noah Kahan%noah kahan
+143%Olivia Rodriguo%olivia rodriguo
+144%OMI%omi
+145%One Direction%one direction
+146%OneRepublic%one ?republic
+147%Ozzy Ozbourne%ozzy ozbou?rne?
+148%Pat Benetar%pat benetar
+149%Paula Abdul%paula abdul
+150%Pearl Jam%pearl ?jam
+151%Peter Gabriel%peter gabriel
+152%Peter, Paul & Mary%peter, paul \& mary
+153%Pharrell Williams%pharrell williams
+154%Phil Collins%phil coll?ins
+155%Pink%pink
+156%Pink Floyd%pink floyd
+157%Portishead%portishead
+158%Prince%prince
+159%Queen%queen
+160%Queensryche%queensr(y|ei)che?
+161%Ram Jam%ram ?jam
+162%Ray Charles%ray charles
+163%REO Speedwagon%reo speedwagon
+164%Richard Harris%richard harris
+165%Rick Astley%ric?k astle?y
+166%Rosé and Bruno Mars%ros[eé] (and|&|n) bruno mars
+167%Rose Royce%rose royce
+168%Run DMC%run dmc
+169%Sade%sade( abo?u)?
+170%Salt-n-Pepa%salt-n-pepa
+171%Santana%(carlos )?santana
+172%Sheryl Crow%[sc]heryl crow
+173%Sia%sia
+174%Simon & Garfunkel%simon (&|and) garfunkel
+175%Snow Patrol%snow patrol
+176%Soundgarden%sound ?garden
+177%Stan Goetz, João Gilberto, Astrud Gilberto%stan go?etz, jo[ãa]o gilberto, astrud gilberto
+178%Stevie Wonder%stevie wonder
+179%Suzanne Vega%suzanne vega
+180%Taio Cruz and Ludacris%taio cruz and ludacris
+181%Taylor Dayne%taylor dayne
+182%Taylor Swift%taylor swift
+183%The Animals%(the )?animals
+184%The Backstreet Boys%(the )?backstreet boy[sz]
+185%The Bangles%(the )?bangles
+186%The Beatles%(the )?beatles
+187%The BeeGees%(the )?bee( |-)?gees
+188%The Black Crowes%(the )?black crowe?s
+189%The Black Eyed Peas%(the )?black[- ]eyed peas
+190%The Black Keys%(the )?black keys
+191%The Box Tops%(the )?box tops
+192%The Cars%(the )?cars
+193%The Chi-Lites%(the )?chi-lites
+194%The Chordettes%(the )?ch?ordette?s
+195%The Clash%(the )?clash
+196%The Commodores%(the )?comm?odore?s
+197%The Cranberries%(the )?cranberr?ies
+198%The Cure%(the )?cure
+199%The Darkness%(the )?darkness
+200%The Doobie Brothers%(the )?doobie brothers
+201%The Eagles%(the )?eagles
+202%the Eurythmics%(the )?eurythmics
+203%The Everly Brothers%(the )?everl(y|ie) brothers
+204%The Go-Go’s%(the )?go-?go[’']?s
+205%The Greatest Showman%(the )?greatest showman
+206%The Hollies%(the )?hollies
+207%The Killers%(the )?killers
+208%The Knack%(the )?knack
+209%The Lovin’ Spoonful%(the )?lovin[’'g]? spoonful
+210%The Monkees%(the )?monk(ie|ee|ey)[sz]
+211%The Moody Blues%(the )?moody blues
+212%The Muppet Movie%((the )?muppet movie)|(kermit( the frog)?)
+213%The Music Man%(the )?music man
+214%The Police%(the )?police
+215%The Red Hot Chili Peppers%(the )?red hot chill?i peppers
+216%The Rolling Stones%(the )?rolling stones
+217%The Smiths%(the )?smiths
+218%The Spice Girls%(the )?spice ?girls
+219%The Temptations%(the )?temptations
+220%The Weeknd%the week(e)?nd
+221%They Might Be Giants%they might be giants
+222%Tina Turner%tina turner
+223%Tom Petty%tom petty
+224%Tony Bennett%tony bennett
+225%Toni Braxton%toni braxton
+226%TOTO%toto
+227%Tracy Chapman%tracy chapman
+228%Train%train
+229%U2%u2
+230%Us3%us ?(3|three)
+231%Usher%usher
+232%Van Morrison%van morr?ison
+233%Weird Al%weird al
+234%Whitney Houston%whitney houston
+235%Will Smith%will smith
+236%Yes%yes
